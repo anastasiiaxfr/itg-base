@@ -119,10 +119,12 @@ header
         list-style-type: none
         +flex(inline-flex, center, flex-start, wrap)
         gap: $gap20
-        +ft(24, 36, 600, $ffText)
-        color: $grey3
+        +ft(18, 18*1.4, 500, $ffText)
+        letter-spacing: 0.01em
+        color: $black
+        opacity: 0.4
         +maw($xsm)
-            +ft(16, 16*1.3, 600, $ffText)
+            +ft(16, 16*1.3, 400, $ffText)
 
         &:not(:last-of-type)
             &::after
@@ -131,7 +133,6 @@ header
                 margin-right: $gap20
 
         &.active
-            color: $grey
+            color: $grey9
+            opacity: 0.8
             
-
-

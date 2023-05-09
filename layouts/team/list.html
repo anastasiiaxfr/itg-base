@@ -1,0 +1,62 @@
+{{ define "main" }} {{ $lang := .Page.Lang }} {{ $data := index $.Site.Data }}
+
+<div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}} {{ .Scratch.Set "title" .Params.title }} {{ .Scratch.Set "subtitle" .Params.sub_title }} {{ .Scratch.Set "search" false }} {{- partial "_hero-parent.html" . -}}
+    <!-- END section -->
+</div>
+<article class="page__single">
+    <div class="container">
+
+        {{ with (index $data $lang) }} {{ if .team.team }} {{ with .team.team }}
+
+        <section class="team__container">
+            <div class="team__wrap--main">
+                {{ range $i, $arr := .items }} {{ if le $i 2 }}
+                <a class="team team--lg" href="{{ .ln }}" target="_blank">
+                    <figure class="team__ava">
+                        <img src="{{ .icon | relURL }}" alt="{{ .name }}" />
+
+                        <div class="team__ava-overlay">
+                            <svg class="icon" width="48" height="48">
+                                <use xlink:href="#ln"></use>
+                            </svg>
+                        </div>
+                    </figure>
+                    <figcaption class="team__title">
+                        <div class="team__name">{{ .name | markdownify }}</div>
+                        <div class="team__job">{{ .job | safeHTML }}</div>
+                    </figcaption>
+                </a>
+                {{ end }} {{ end }}
+            </div>
+            <div class="team__wrap">
+                {{ range $i, $arr := .items }} {{ if gt $i 2 }}
+                <a class="team" href="{{ .ln }}" target="_blank">
+                    <figure class="team__ava">
+                        <img src="{{ .icon | relURL }}" alt="{{ .name }}" />
+                        <div class="team__ava-overlay">
+                            <svg class="icon" width="48" height="48">
+                                <use xlink:href="#ln"></use>
+                            </svg>
+                        </div>
+                    </figure>
+                    <figcaption class="team__title">
+                        <div class="team__name">{{ .name | safeHTML }}</div>
+                        <div class="team__job">{{ .job | safeHTML }}</div>
+                    </figcaption>
+                </a>
+                {{ end }} {{ end }}
+            </div>
+        </section>
+        {{ end }} {{ end }} {{ end }}
+    </div>
+
+    <div class="page__info">
+        {{ with (index $data $lang) }} {{ $subscribe := .homepage.section_subscribe_work }} {{- partial "_subscribe.html" (dict "title" $subscribe.title "subtitle" $subscribe.sub_title "btn_title" $subscribe.btn.title "btn_label" $subscribe.btn.label "btn_url"
+        $subscribe.btn.url) -}} {{ end }}
+    </div>
+    </div>
+</article>
+
+{{ end }}

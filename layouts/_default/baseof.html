@@ -16,14 +16,47 @@
   {{- partial "_btn-top.html" . -}}
   {{- partial "footer.html" . -}}
 
-
+  <!-- <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": "ITG",
+      "brand": "ITG",
+      "alternateName": "ITG",
+      "url": "https://itg-main.netlify.app/",
+      "logo": "https://itg-main.netlify.app/logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Василя Тютюнника 28А",
+        "addressLocality": "Київ",
+        "addressCountry": "Україна"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "380505635807",
+        "email": "office@itg-investments.com",
+        "contactType": "customer support",
+        "areaServed": "UA",
+        "availableLanguage": ["Ukrain"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/InternationalTradeGroup2018",
+        "https://www.instagram.com/itg_official__/",
+        "https://www.tiktok.com/@itg_general__",
+        "https://twitter.com/ITG_General_",
+        "https://www.youtube.com/channel/UC4Blz7CAtrKwTL8mYt6LpfA",
+        "https://t.me/ITG_club",
+        "https://ru.tradingview.com/u/ITG_company/"
+      ]
+    }
+</script> -->
 
   {{ range .Site.Params.plugins.js }}
   <script src="{{ .link | relURL }}"></script>
   {{ end }}
 
   {{ $script := resources.Get "js/script.js" | minify }}
-  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format " 01-02-2006-14-52-26"}}"></script>
+  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format "01-02-2006-14-52-26"}}"></script>
 
   {{- partial "_svg.html" . -}}
 

@@ -1,419 +1,543 @@
 body
-	+theme(white)
-	
-	background-image: url('../images/bg.svg')
-	background-repeat: no-repeat
-	background-size: cover
-	background-position: center top
-	font-family: $ffText2
+    +theme(white)
+
+    background-image: url('../images/bg.webp')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top
+    font-family: $ffText2
 
 
 a
-	font-family: inherit
-	&:hover, &:focus, &:active, &:focus-visible
-		color: inherit
-		outline: none
-		appearance: none
-		box-shadow: none
+    font-family: inherit
+    &:hover, &:focus, &:active, &:focus-visible
+        color: inherit
+        outline: none
+        appearance: none
+        box-shadow: none
 
 
 .card
-	@extend %card
-	margin: 0
+    @extend %card
+    margin: 0
 
-	+ft(14, 18, 400, $ffText2)
-	color: $grey3
+    +ft(14, 18, 400, $ffText2)
+    color: $grey3
 
-	&:nth-last-of-type(3), &:nth-last-of-type(2), &:nth-last-of-type(1)
-		.card__icon
-			opacity: 1
-	&:nth-last-of-type(3)
-		.card__icon
-			color: $pink
-	&:nth-last-of-type(2)
-		.card__icon
-			color: $blue
-	&:nth-last-of-type(1)
-		.card__icon
-			color: $blue1
-		
-	&__title
-		//margin-bottom: 6px
-		margin-bottom: 12px
-		+ft(26, 29, 700, $ffHeading)
-		color: $black
+    &:nth-last-of-type(3), &:nth-last-of-type(2), &:nth-last-of-type(1)
+        .card__icon
+            opacity: 1
+    &:nth-last-of-type(3)
+        .card__icon
+            color: $pink
+    &:nth-last-of-type(2)
+        .card__icon
+            color: $blue
+    &:nth-last-of-type(1)
+        .card__icon
+            color: $blue1
+        
+    &__title
+        //margin-bottom: 6px
+        margin-bottom: 12px
+        +ft(26, 29, 700, $ffHeading)
+        color: $black
 
-	&__content
-		position: relative
-		z-index: 2
-		width: 90%
-		padding: 30px
-		padding-bottom: 0
+    &__content
+        position: relative
+        z-index: 2
+        width: 90%
+        padding: 30px
+        padding-bottom: 0
 
-	&__footer
-		position: relative
-		z-index: 1
-		+flex(flex, center, flex-end, nowrap)
-		padding: 30px
-		padding-top: 0
+    &__footer
+        position: relative
+        z-index: 1
+        +flex(flex, center, flex-end, nowrap)
+        margin-top: auto
+        padding: 30px
+        padding-top: 0
 
-	&__icon
-		+ps(absolute, (b, 0), (r, 0))
-		z-index: -1
-		color: $blue1
-		opacity: 0
+    &__icon
+        +ps(absolute, (b, 0), (r, 0))
+        z-index: -1
+        color: $blue1
+        opacity: 0
 
-	&__wrap
-		display: grid
-		//grid-template-columns: repeat(auto-fit, minmax(calc(33% - 20px), 1fr))
-		grid-template-columns: repeat(auto-fit, minmax(413px, 1fr))
-		gap: $gap20
+    &__wrap
+        display: grid
+        //grid-template-columns: repeat(auto-fit, minmax(calc(33% - 20px), 1fr))
+        grid-template-columns: repeat(auto-fit, minmax(413px, 1fr))
+        gap: $gap20
 
-		+maw($xs)
-			grid-template-columns: 1fr
+        +maw($xs)
+            grid-template-columns: 1fr
 
 
 .card-line
-	@extend %card
-	+flex(flex, center, space-between, nowrap)
-	gap: 20px
-	width: 100%
-	padding: 15px 40px
-	+ft(14, 18, 400, $ffText2)
-	color: $grey4
+    @extend %card
+    +flex(flex, center, space-between, nowrap)
+    gap: 20px
+    width: 100%
+    padding: 15px 40px
+    +ft(14, 18, 400, $ffText2)
+    color: $grey4
 
-	svg
-		min-width: 24px
+    svg
+        min-width: 24px
 
-	&__title
-		//margin-bottom: 6px
-		margin-bottom: 0
-		//+ft(24, 36, 600, $ffText)
-		+ft(17, 17*1.4, 600, $ffText2)
-	+maw($sm)
-		padding: 15px 20px
-		&__title
-			+ft(16, 16*1.4, 600)
+    &__title
+        //margin-bottom: 6px
+        margin-bottom: 0
+        //+ft(24, 36, 600, $ffText)
+        +ft(17, 17*1.4, 600, $ffText2)
+
+    &__info
+        +flex(flex, center, space-between, wrap)
+        gap: 10px
+        +ft(14, 18, 400, $ffText2)
+        color: $grey11
+
+    +maw($sm)
+        padding: 15px 20px
+        &__title
+            +ft(16, 16*1.4, 600)
 
 
 .hero
-	margin-top: 60px
-	margin-bottom: 60px	
-	
-	&-parent
-		margin-bottom: 0
+    margin-top: 60px
+    margin-bottom: 60px	
+    
+    &-parent
+        margin-bottom: 0
 
-	&__search
-		+flex(flex, center, space-between, nowrap)
-		margin-top: 90px
-		margin-bottom: 35px
-		column-gap: 45px
-		row-gap: 20px
-	+maw($sm)
-		&__search
-			margin-top: 40px
-			flex-wrap: wrap	
-	+maw($xs)
-		margin-top: 30px
-		margin-bottom: 30px
-		&-parent
-			margin-bottom: 0
+    &__search
+        +flex(flex, center, space-between, nowrap)
+        margin-top: 90px
+        margin-bottom: 35px
+        column-gap: 45px
+        row-gap: 20px
+    +maw($sm)
+        &__search
+            margin-top: 40px
+            flex-wrap: wrap	
+    +maw($xs)
+        margin-top: 30px
+        margin-bottom: 30px
+        &-parent
+            margin-bottom: 0
 
 
 .subscribe
-	+flex(flex, center, space-between, nowrap)
-	position: relative
-	width: 100%
-	margin: 0 auto
-	padding: 80px 70px
-	border-radius: $brs2
-	background-image: url('../images/bg-subscribe-img.svg'), url('../images/bg-subscribe-bd.svg')
-	background-size: contain 
-	background-repeat: no-repeat
-	background-position: 0 50%, 50%
-	color: $grey4
+    +flex(flex, center, space-between, nowrap)
+    position: relative
+    width: 100%
+    margin: 0 auto
+    padding: 80px 70px
+    border-radius: $brs2
+    background-image: url('../images/bg-subscribe-img.svg'), url('../images/bg-subscribe-bd.svg')
+    background-size: contain 
+    background-repeat: no-repeat
+    background-position: 0 50%, 50%
+    color: $grey4
 
-	&__title
-		margin-bottom: 10px
-		//+ft(64, 96, 600, $ffText)
-		+ft(64, 64, 600, $ffText)
+    &__title
+        margin-bottom: 10px
+        //+ft(64, 96, 600, $ffText)
+        +ft(64, 64, 600, $ffText)
 
-	&__text
-		+ft(16, 24, 400, $ffText)
+    &__text
+        +ft(16, 24, 400, $ffText)
 
-	.btn
-		+theme(blue)
-		padding: 17.5px 60px
-		+ft(21, 35, 600)
-		white-space: nowrap
+    .btn
+        +theme(blue)
+        padding: 17.5px 60px
+        +ft(21, 35, 600)
+        white-space: nowrap
 
-		&__label
-			display: block
-			margin-bottom: 10px
-			text-align: center
+        &__label
+            display: block
+            margin-bottom: 10px
+            text-align: center
 
-	+maw($lg)
-		&__title
-			+ft(42, 42, 600)
-			margin-bottom: 10px
-		.btn
-			padding: 17.5px 1.5em
-			+ft(16, 16, 600)
+    +maw($lg)
+        &__title
+            +ft(42, 42, 600)
+            margin-bottom: 10px
+        .btn
+            padding: 17.5px 1.5em
+            +ft(16, 16, 600)
 
-	+maw($md)
-		background-image: none
-		border-radius: 0
-		border: 5px solid $blue2
-		border-width: 5px 0
-		padding: 20px
+    +maw($md)
+        background-image: none
+        border-radius: 0
+        border: 5px solid $blue2
+        border-width: 5px 0
+        padding: 20px
 
-	+maw($sm)
-		flex-wrap: wrap
-		text-align: center
+    +maw($sm)
+        flex-wrap: wrap
+        text-align: center
 
-		&__btn
-			max-width: 100%
-			width: 100%
+        &__btn
+            max-width: 100%
+            width: 100%
 
-			.btn
-				width: 100%
-				&__label
-					display: none
+            .btn
+                width: 100%
+                &__label
+                    display: none
 
-	+maw($xs)
-		&__title
-			+ft(24, 24, 600)
+    +maw($xs)
+        &__title
+            +ft(24, 24, 600)
 
 
 .subscribe-base
-	padding: 55px
-	background-image: url('../images/bg-subscribe-2.svg')
-	background-repeat: no-repeat
-	background-size: cover
-	border-radius: 26px
-	color: $grey8
-	overflow: hidden
+    padding: 55px
+    background-image: url('../images/bg-subscribe-2.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 26px
+    color: $grey8
+    overflow: hidden
 
-	+maw($md)
-		padding: 25px 20px
+    +maw($md)
+        padding: 25px 20px
 
-	&__row
-		+flex(flex, center, space-between, nowrap)
-		row-gap: 20px
-		height: 100%
+    &__row
+        +flex(flex, center, space-between, nowrap)
+        row-gap: 20px
+        height: 100%
 
-		+maw($md)
-			flex-wrap: wrap
-			justify-content: center
-			text-align: center
-	
-	&__title
-		margin-bottom: 16px
-		//+ft(32, 48, 600, $ffText)
-		+ft(32, 32, 600, $ffText)
-		+maw($xsm)
-			+ft(24, 24, 600)
-		
+        +maw($md)
+            flex-wrap: wrap
+            justify-content: center
+            text-align: center
+    
+    &__title
+        margin-bottom: 16px
+        //+ft(32, 48, 600, $ffText)
+        +ft(32, 32, 600, $ffText)
+        +maw($xsm)
+            +ft(24, 24, 600)
+        
 
-	&__text
-		+ft(18, 21, 600, $ffText2)
-		+maw($xsm)
-			+ft(16, 16*1.4, 600)
+    &__text
+        +ft(18, 21, 600, $ffText2)
+        +maw($xsm)
+            +ft(16, 16*1.4, 600)
 
-	.btn
-		min-width: 270px
-		color: $white
+    .btn
+        min-width: 270px
+        color: $white
 
-		&__label
-			display: block
-			margin-bottom: $gap20
-			text-align: center
+        &__label
+            display: block
+            margin-bottom: $gap20
+            text-align: center
 
-			svg
-				margin-left: 10px
+            svg
+                margin-left: 10px
 
 
 .page
-	&__content
-		margin-top: 30px
-		margin-bottom: 90px
-		+maw($xsm)
-			margin-bottom: 30px
-			margin-top: 0
+    &__content
+        margin-top: 30px
+        margin-bottom: 90px
+        +maw($xsm)
+            margin-bottom: 30px
+            margin-top: 0
 
-	&__container
-		@extend %card
-		user-select: initial
-		padding: 25px 40px 30px
+    &__container
+        overflow: hidden
+        @extend %card
+        user-select: initial
+        //padding: 25px 40px 30px
+        padding: 50px
 
-		+ft(14, 18, 400, $ffText2)
-		color: $grey3
+        +ft(14, 18, 400, $ffText2)
+        color: $grey3
 
-		h1, h2, h3, h4, h5, h6
-			margin-bottom: $gap20
-			margin-top: $gap20 + 10px
-			color: $grey6 
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: $gap20
+            margin-top: $gap20 + 10px
+            color: $grey6 
 
-		& > :first-child
-			margin-top: 0
+        & > :first-child
+            margin-top: 0
 
-		b, strong
-			color: $grey6 
-		h1, h2
-			//+ft(24, 36, 600, $ffText)
-			@extend %h3
-			
-		h3, h4, h5, h6
-			@extend %h4
-		p
-			margin-top: $gap20
-			margin-bottom: $gap20
-			&:first-of-type
-				margin-top: 0
-			&:last-of-type
-				margin-bottom: 0
+        b, strong
+            color: $grey6 
+        h1, h2
+            //+ft(24, 36, 600, $ffText)
+            @extend %h3
+            
+        h3, h4, h5, h6
+            @extend %h4
+        p
+            margin-top: $gap20
+            margin-bottom: $gap20
+            &:first-of-type
+                margin-top: 0
+            &:last-of-type
+                margin-bottom: 0
 
-		a
-			text-decoration: underline
-			&:hover, &:active, &:focus
-				text-decoration: none
+        a
+            text-decoration: underline
+            overflow-wrap: break-word
 
-	&__single
-		margin-bottom: 60px
-		.container
-			display: flex
-			flex-direction: column
-			gap: 20px
-		+maw($sm)
-			margin-bottom: 30px
+            &:hover, &:active, &:focus
+                text-decoration: none
 
-	&__info
-		margin-top: 20px
-		+maw($sm)
-			margin-top: 0
+        +maw($xxs)
+            padding: 25px
 
-	&__row
-		+flex(flex, flex-start, flex-start, nowrap)
-		flex-direction: column
-		gap: $gap20
+    &__single
+        margin-bottom: 60px
+        .container
+            display: flex
+            flex-direction: column
+            gap: 20px
+        +maw($sm)
+            margin-bottom: 30px
 
-	&__title
-		margin-bottom: 0
-		+maw($sm)
-			text-align: center
+    &__info
+        margin-top: 20px
+        +maw($sm)
+            margin-top: 0
 
-	&__actions
-		display: grid
-		grid-template-columns: 300px 1fr
-		gap: 20px
+    &__row
+        +flex(flex, flex-start, flex-start, nowrap)
+        flex-direction: column
+        gap: $gap20
 
-		+maw($md)
-			grid-template-columns: 1fr
+    &__title
+        margin-bottom: 0
+        +maw($sm)
+            text-align: center
 
-	&__sidebar
-		position: relative
-		@extend %card
-		padding: 20px
+    &__actions
+        display: grid
+        grid-template-columns: 300px 1fr
+        gap: 20px
+
+        +maw($md)
+            grid-template-columns: 1fr
+
+    &__sidebar
+        position: relative
+        @extend %card
+        padding: 20px
 
 
-	&__wrap
-		display: grid
-		grid-template-columns: 310px 1fr
-		gap: $gap20
+    &__wrap
+        display: grid
+        grid-template-columns: 310px 1fr
+        gap: $gap20
 
-		+maw($md)
-			grid-template-columns: 1fr
+        +maw($md)
+            grid-template-columns: 1fr
 
 
 
 .interest
-	@extend %card
-	color: $grey8
-	padding: 30px 35px
-	text-align: center
+    @extend %card
+    color: $grey8
+    padding: 30px 35px
+    text-align: center
 
-	&__row
-		+flex(flex, flex-start, center, nowrap)
-		gap: $gap20
+    &__row
+        +flex(flex, flex-start, center, nowrap)
+        gap: $gap20
 
-	&__title
-		margin-bottom: $gap20
-		+ft(16, 16*1.5, 400, $ffText)
-		letter-spacing: 0.1em
+    &__title
+        margin-bottom: $gap20
+        +ft(16, 16*1.5, 400, $ffText)
+        letter-spacing: 0.1em
 
-	figure
-		cursor: pointer
-		transition: $trs
-		margin: 0
-		&:hover, &:focus, &:active
-			color: $grey2
+    figure
+        cursor: pointer
+        transition: $trs
+        margin: 0
+        &:hover, &:focus, &:active
+            color: $grey2
 
-	figcaption
-		+ft(18, 21, 400, $ffText)
+    figcaption
+        +ft(18, 21, 400, $ffText)
 
 
 .tabs
-	+flex(flex, center, fles-start, nowrap)
-	flex-direction: column
-	gap: 16px
+    +flex(flex, center, fles-start, nowrap)
+    flex-direction: column
+    gap: 16px
 
-	+maw($md)
-		overflow: hidden
-		overflow-y: scroll
-		max-height: 225px
-		
-	+maw($sm)
-		max-height: 200px
+    +maw($md)
+        overflow: hidden
+        overflow-y: scroll
+        max-height: 225px
+        
+    +maw($sm)
+        max-height: 200px
 
-	&__toggle
-		display: block
-		width: 100%
-		+ft(16, 24, 400, $ffText)
-		color: $grey3
-		cursor: pointer
-		&.active, &:hover
-			color: $grey4
-			text-shadow: 0 0 0 $grey4
+    &__toggle
+        display: block
+        width: 100%
+        +ft(16, 24, 400, $ffText)
+        color: $grey3
+        cursor: pointer
+        &.active, &:hover
+            color: $grey4
+            text-shadow: 0 0 0 $grey4
 
-	&__content
-		@extend %card
-		padding: 35px 40px
+    &__content
+        overflow: hidden
+        @extend %card
+        padding: 35px 40px
 
-	&__item
-		display: none
-		animation: fadeEffect 1.5s
+    &__item
+        display: none
+        animation: fadeEffect 1.5s
 
-		+ft(14, 18, 400, $ffText2)
-		color: $grey9
+        +ft(14, 18, 400, $ffText2)
+        color: $grey9
 
-		&.active
-			display: block
+        &.active
+            display: block
 
-		h1, h2, h3, h4, h5, h6
-			margin-bottom: $gap20
-			color: $grey4
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: $gap20
+            color: $grey4
 
-		h1, h2
-			//+ft(36, 54, 700, $ffText)
-			@extend %h3
+        h1, h2
+            //+ft(36, 54, 700, $ffText)
+            @extend %h3
 
-		h3, h4, h5, h6
-			@extend %h4
+        h3, h4, h5, h6
+            @extend %h4
 
-		a
-			text-decoration: underline
-			&:hover, &:active, &:focus
-				text-decoration: none
-	
-	&__text
-		h1, h2, h3, h4, h5, h6
-			margin-top: $gap20 + 10px
+        a
+            text-decoration: underline
+            overflow-wrap: break-word
+            &:hover, &:active, &:focus
+                text-decoration: none
+    
+    &__text
+        h1, h2, h3, h4, h5, h6
+            margin-top: $gap20 + 10px
 
 
 @keyframes fadeEffect 
-	from
-		opacity: 0
-		transform: translateY(50px)
-	to 
-		opacity: 1
-		transform: translateY(0)
+    from
+        opacity: 0
+        transform: translateY(50px)
+    to 
+        opacity: 1
+        transform: translateY(0)
+
+
+.team
+    width: 100%
+    text-align: center
+
+    &:hover
+        .team__ava-overlay
+            opacity: 1
+
+    &__container
+        width: 100%
+        margin: 0 auto 40px
+        +maw($xs)
+            margin-top: 10px
+
+    &__wrap, &__wrap--main
+        display: grid
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr))
+        width: 100%
+        row-gap: $gap20 * 2.5
+        margin-left: auto
+        margin-right: auto
+
+        +maw($xs)
+            row-gap: $gap20
+
+        +maw($xxs)
+            grid-template-columns: 1fr
+       
+        &--main
+            grid-template-columns: repeat(auto-fit, 200px)
+            justify-content: center
+            gap: $gap20
+            row-gap: $gap20 * 2.5
+            margin-bottom: $gap20 * 2.5
+           
+            +maw($sm)
+                .team:last-child
+                    grid-column: 1/-1
+                    order: -1
+
+            +maw($xs)
+                row-gap: $gap20
+                margin-bottom: $gap20
+             
+    &__ava
+        position: relative
+        +sz(150px, 150px)
+        margin: 0 auto 10px
+        border-radius: 50%
+        overflow: hidden
+
+        .team--lg &
+            +sz(196px, 196px)
+
+        +maw($xs)
+            &, .team--lg &
+                +sz(75px, 75px)
+
+        &-overlay
+            +ps(absolute, (t, 0), (l, 0))
+            +flex(flex, center, center, nowrap)
+            +sz(100%, 100%)
+            background-color: rgba($black, 0.7)
+            opacity: 0
+            transition: $trs
+
+        & > img
+            display: block
+            +sz(100%, 100%)
+            margin-left: auto
+            margin-right: auto
+            border-radius: 50%
+            object-fit: cover
+    
+    &__name
+        margin: 0 auto 10px
+        //+ft(24, 36, 700, $ffText)
+        +ft(20, 20*1.4, 700, $ffText2)
+        color: $grey10
+        user-select: none
+
+        +maw(424)
+            font-size: 18px
+            br
+                display: none
+        
+
+    &__job
+        +ft(14, 18, 400, $ffText2)
+        font-size: 12px
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        color: $orange
+        user-select: none
+        &::first-letter
+            text-transform: uppercase
+
+
+
+   
+
+
+
+
+

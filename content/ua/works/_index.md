@@ -1,5 +1,6 @@
 ---
-title: "Services"
+title: "Careers"
+sub_title: "Погнали к нам в команду"
 title_before: ""
 titile_after: ""
 

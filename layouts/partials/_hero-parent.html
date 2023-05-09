@@ -1,39 +1,31 @@
-{{ $data := index .Site.Data .Site.Language.Lang }}
-
-{{ $title := .Scratch.Get "title" }}
-{{ $sub_title := .Scratch.Get "subtitle" }}
-{{ $search := .Scratch.Get "search" }}
+{{ $data := index .Site.Data .Site.Language.Lang }} {{ $title := .Scratch.Get "title" }} {{ $sub_title := .Scratch.Get "subtitle" }} {{ $search := .Scratch.Get "search" }}
 
 <section class="hero {{ if $search  }} hero-parent {{ end }}">
     <div class="container">
         <div class="row">
             <div class="mx-auto text-center">
-                {{ if $data.homepage.hero }}
-                {{ with $data.homepage.hero }}
+                {{ if $data.homepage.hero }} {{ with $data.homepage.hero }}
                 <h1>
                     {{ .title }}
                 </h1>
-                {{ end }}
-                {{ end }}
+                {{ end }} {{ end }}
 
-               <h2>
-                {{ $title }}
-               </h2>
-               {{ if $sub_title }} 
-                <p class="text__sub">
-                {{ $sub_title }}
-               </p>
-               {{ end }}
-
-               {{ if $search }}
-               <div class="hero__search">
-                {{- partial "_search.html" . -}}
-                {{- partial "_tm.html" . -}}
-               </div>
-               {{ end }}
+                <h2>
+                    {{ $title }}
+                </h2>
+                {{ if $sub_title }}
+                <div class="col-lg-7 mx-auto">
+                    <p class="text__sub">
+                        {{ $sub_title }}
+                    </p>
+                </div>
+                {{ end }} {{ if $search }}
+                <div class="hero__search">
+                    {{- partial "_search.html" . -}} {{- partial "_tm.html" . -}}
+                </div>
+                {{ end }}
 
             </div>
         </div>
     </div>
 </section>
-

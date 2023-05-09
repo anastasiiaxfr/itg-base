@@ -1,30 +1,23 @@
-{{ $title := slice }}
-{{ $description := slice }}
-
-{{ if (.Params.title_before | or .Params.title_after) }}
-{{ $title = $title | append .Params.title_before }}
-{{ $title = $title | append .Title }}
-{{ $title = $title | append .Params.title_after }}
-{{ $title = delimit $title " " }}
-{{ else }}
-{{ $title = .Title }}
+{{ $title := slice }} {{ $description := slice }} {{ if (.Params.title_before |
+or .Params.title_after) }} {{ $title = $title | append .Params.title_before }}
+{{ $title = $title | append .Title }} {{ $title = $title | append
+.Params.title_after }} {{ $title = delimit $title " " }} {{ else }} {{ $title =
+.Title }} {{ end }} {{ if (.Params.description_before | or
+.Params.description_after) }} {{ $description = $description | append
+.Params.description_before }} {{ $description = $description | append
+.Params.description }} {{ $description = $description | append
+.Params.description_after }} {{ $description = delimit $description " " }} {{
+else }} {{ $description = .Params.description | or .Site.Params.description }}
 {{ end }}
 
-{{ if (.Params.description_before | or .Params.description_after) }}
-{{ $description = $description | append .Params.description_before }}
-{{ $description = $description | append .Params.description }}
-{{ $description = $description | append .Params.description_after }}
-{{ $description = delimit $description " " }}
-{{ else }}
-{{ $description = .Params.description | or .Site.Params.description }}
-{{ end }}
-
-<meta charset="utf-8">
+<meta charset="utf-8" />
 <title>{{ .Site.Params.site_name }} | {{ $title | truncate 60 }}</title>
-<meta name="description" content="{{ $description | truncate 160 }}">
+<meta name="description" content="{{ $description | truncate 160 }}" />
 
-
-<meta name="author" content="{{ .Site.Params.author }} && {{ .Site.Params.develop }}">
+<meta
+  name="author"
+  content="{{ .Site.Params.author }} && {{ .Site.Params.develop }}"
+/>
 {{ hugo.Generator }}
 
 <!-- canonical link tag -->
@@ -33,54 +26,115 @@
 <!-- Facebook and Twitter integration -->
 {{ if not .Site.Params.OpenGraph.hide }}
 <!-- FACESPACE -->
-<meta property="og:title" content="{{ $title | truncate 60 }}">
-<meta property="og:description" content="{{ $description | truncate 160 }}">
+<meta property="og:title" content="{{ $title | truncate 60 }}" />
+<meta property="og:description" content="{{ $description | truncate 160 }}" />
 
-<meta property="og:image:height" content="600">
-<meta property="og:image:width" content="314">
-<meta property="og:image" content="{{ `images/og.jpg` | relURL }}">
+<meta property="og:image:height" content="600" />
+<meta property="og:image:width" content="314" />
+<meta property="og:image" content="{{ `images/og.jpg` | relURL }}" />
 
-<meta property="fb:app_id" content="...">
-<meta property="fb:admins" content="{{ .Site.Params.author }}">
+<meta property="fb:app_id" content="..." />
+<meta property="fb:admins" content="{{ .Site.Params.author }}" />
 
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="{{ .Site.Params.site_name }}">
-<meta property="og:url" content="{{ .Permalink }}">
-
-{{ end }}
+<meta property="og:site_name" content="{{ .Site.Params.site_name }}" />
+<meta property="og:url" content="{{ .Permalink }}" /> {{ end }}
 
 <!-- THE TWITTER MACHINE -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:site" content="{{ .Site.Params.site_url }}">
-<meta name="twitter:creator" content="{{ .Site.Params.author }}">
-<meta name="twitter:title" content="{{ $title | truncate 60 }}">
-<meta name="twitter:description" content="{{ $description | truncate 160 }}">
+<meta name="twitter:site" content="{{ .Site.Params.site_url }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.author }}" />
+<meta name="twitter:title" content="{{ $title | truncate 60 }}" />
+<meta name="twitter:description" content="{{ $description | truncate 160 }}" />
 <meta name="twitter:image" content="{{ `images/og.jpg` | relURL }}" />
 
-
 <!-- G++ -->
-<meta itemprop="name" content="{{  $title | truncate 60 }}">
-<meta itemprop="description" content="{{ $description | truncate 60 }}">
-<meta itemprop="image" content="{{  `images/og.jpg` | relURL }}">
+<meta itemprop="name" content="{{  $title | truncate 60 }}" />
+<meta itemprop="description" content="{{ $description | truncate 60 }}" />
+<meta itemprop="image" content="{{  `images/og.jpg` | relURL }}" />
 
-
-<link href="{{ `fav/favicon.ico` | relURL }}" rel="shortcut icon" type="image/x-icon" />
+<link
+  href="{{ `fav/favicon.ico` | relURL }}"
+  rel="shortcut icon"
+  type="image/x-icon"
+/>
 <link href="{{ `fav/favicon.ico` | relURL }}" rel="icon" type="image/x-icon" />
 
 <!--Favicon-->
-<link rel="shortcut icon" href="{{ `fav/favicon.png` | relURL }}" type="image/x-icon">
-<link rel="icon" href="{{ `fav/favicon.png` | relURL }}" type="image/x-icon">
+<link
+  rel="shortcut icon"
+  href="{{ `fav/favicon.png` | relURL }}"
+  type="image/x-icon"
+/>
+<link rel="icon" href="{{ `fav/favicon.png` | relURL }}" type="image/x-icon" />
 
-<link rel="apple-touch-icon" sizes="144x144" href="{{ `fav/apple-touch-icon.png` | relURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ `fav/favicon-32x32.png` | relURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ `fav/favicon-16x16.png` | relURL }}">
-<link rel="mask-icon" href="{{ `fav/safari-pinned-tab.svg` | relURL }}" color="#fff">
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="{{ `fav/apple-touch-icon.png` | relURL }}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{{ `fav/favicon-32x32.png` | relURL }}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{{ `fav/favicon-16x16.png` | relURL }}"
+/>
+<link
+  rel="mask-icon"
+  href="{{ `fav/safari-pinned-tab.svg` | relURL }}"
+  color="#fff"
+/>
 
-<link rel="manifest" href="{{ `fav/site.webmanifest` | relURL }}">
-<link rel="mask-icon" href="{{ `fav/safari-pinned-tab.svg` |relURL }}" color="#333333">
-<meta name="msapplication-TileColor" content="#333333">
-<meta name="theme-color" content="#f5f5f5">
+<link rel="manifest" href="{{ `fav/site.webmanifest` | relURL }}" />
+<link
+  rel="mask-icon"
+  href="{{ `fav/safari-pinned-tab.svg` |relURL }}"
+  color="#333333"
+/>
+<meta name="msapplication-TileColor" content="#333333" />
+<meta name="theme-color" content="#f5f5f5" />
+
+<script async type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Organization",
+      "name": "ITG",
+      "brand": "ITG",
+      "alternateName": "ITG",
+      "url": "https://itg-main.netlify.app/",
+      "logo": "https://itg-main.netlify.app/images/logo.svg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Василя Тютюнника 28А",
+        "addressLocality": "Київ",
+        "addressCountry": "Україна"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "380505635807",
+        "email": "office@itg-investments.com",
+        "contactType": "customer support",
+        "areaServed": "UA",
+        "availableLanguage": ["Ukrain"]
+      }],
+      "sameAs": [
+        "https://www.facebook.com/InternationalTradeGroup2018",
+        "https://www.instagram.com/itg_official__/",
+        "https://www.tiktok.com/@itg_general__",
+        "https://twitter.com/ITG_General_",
+        "https://www.youtube.com/channel/UC4Blz7CAtrKwTL8mYt6LpfA",
+        "https://t.me/ITG_club",
+        "https://ru.tradingview.com/u/ITG_company/"
+      ]
+    }
+</script>
 
 <!-- Google Tag Manager -->
 <!-- <script>(function (w, d, s, l, i) {

@@ -1,7 +1,7 @@
 baseURL = "/"
 # canonifyURLs = true
-defaultContentLanguage = "en"
-disableLanguages = ["ua"]
+defaultContentLanguage = "ua"
+disableLanguages = ["ru"]
 paginate = "6"
 relativeURLs = true
 summaryLength = "50"
@@ -21,7 +21,7 @@ weight = 2
 [Languages.ua]
 contentDir = "content/ua"
 home = "Головна"
-languageCode = "ua"
+languageCode = "uk"
 languageName = "Укр"
 weight = 3
 [Languages.en]
@@ -30,6 +30,7 @@ home = "Home"
 languageCode = "en"
 languageName = "ENG"
 weight = 1
+
 
 
 [outputs]
@@ -241,7 +242,7 @@ hasChildren = true
     [[menu.footer]]
     parent = "documentation"
     name = "Terms of use"
-    URL = "terms-of-use"
+    URL = "/terms-of-use"
     weight = 3
     [[menu.footer]]
     parent = "documentation"
