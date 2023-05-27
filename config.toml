@@ -176,11 +176,11 @@ hasChildren = true
     name = "Team"
     URL = "/team"
     weight = 2
-    [[menu.footer]]
-    parent = "about"
-    name = "Careers"
-    URL = "/works"
-    weight = 3
+    # [[menu.footer]]
+    # parent = "about"
+    # name = "Careers"
+    # URL = "/works"
+    # weight = 3
 
 [[menu.footer]]
 name = "Products"
@@ -190,7 +190,7 @@ hasChildren = true
     [[menu.footer]]
     parent = "product"
     name = "Epicurus"
-    URL = "https://itg-epicurus.netlify.app/"
+    URL = "https://epicurus-plp.netlify.app/"
     weight = 1
     [[menu.footer]]
     parent = "product"
