@@ -44,10 +44,10 @@ section_subscribe:
 
 section_subscribe_work:
   enable: true
-  title: Хочешь стать частью команды?
+  title: Хочеш стати частиною команди?
   sub_title: Заповніть анкету, щоб отримати детальну відповідь на ваші запитання
   btn:
     enable: true
-    title: Вакансии ITG 
-    label: конфеденциaльно
+    title: Вакансії ITG
+    label: конфіденційно
     link: "/work"

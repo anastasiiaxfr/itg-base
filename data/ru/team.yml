@@ -3,91 +3,102 @@ team:
   enable: true
   items:
     - icon: ../images/team/team-10.png
-      name: "Максим <br> Рибін" 
-      job: "Private Interpreneur, <br> director"
+      name: "Максим <br> Рибин" 
+      job: "Co-Founder ITG"
       ln: "#"
-    - icon: ../images/team/team-12.png
-      name: "Ігор <br> Порох"
-      job: "Руководитель, <br> лицо бренда"
-      ln: "#"
+
     - icon: ../images/team/team-13.png
-      name: "Фарід <br> Бабаєв" 
-      job: "Руководитель <br> отдела трейдеров"
+      name: "Фарид <br> Бабаев" 
+      job: "Co-Founder ITG"
       ln: "https://www.linkedin.com/in/farid-babayev-05580626b/"
+
+    - icon: ../images/team/team-12.png
+      name: "Игорь <br> Порох"
+      job: "Co-Founder ITG"
+      ln: "#"
 
     - icon: ../images/team/team-11.png
       name: "Александр <br> Филипенко" 
-      job: "Исполнительный <br> директор"
+      job: "Executive <br> Director"
       ln: "#"
+
     - icon: ../images/team/team-15.png
       name: "Дмитрий <br> Ткач" 
-      job: "Коммерческий <br> директор"
+      job: "CCO"
       ln: "https://www.linkedin.com/in/dmitriy-tkach-b04254a9/"
-    
-    - icon: ../images/team/team-9.png
-      name: "Светлана <br> Халиловна" 
-      job: "НР, рекрутер" 
-      ln: "#"
 
     - icon: ../images/team/team-14.png
       name: "Даня <br> Лазоренко" 
-      job: "BizDev, <br> руководитель"
+      job: "Business Development Manager"
       ln: "https://www.linkedin.com/in/danylo-lazorenko-0aa227153/"
 
-    - icon: ../images/team/team-18.png
-      name: "Богдан <br> Трищук"   
-      job: CMO
-      ln: "https://www.linkedin.com/in/%D0%B1%D0%BE%D0%B3%D0%B4%D0%B0%D0%BD-%D1%82%D1%80%D0%B8%D1%89%D1%83%D0%BA-831392185/" 
-   
-    - icon: ../images/team/team-2.png
-      name: "Николай <br> Ульянич" 
-      job: "Team Lead <br> трейдинг отдела"
-      ln: "#"
-    
-    - icon: ../images/team/team-16.png
-      name: "Александр <br> Хохлов" 
-      job: трейдер 
-      ln: "#"
-      
-    - icon: ../images/team/team-1.png
-      name: "Олег <br> Жидченко" 
-      job: трейдер
+    - icon: ../images/team/team-23.png
+      name: "Елена <br> Долгуша" 
+      job: "Project <br> Manager" 
       ln: "#"
 
-    - icon: ../images/team/team-3.png
-      name: "Даяна <br> Евчук" 
-      job: UI/UX designer
-      ln: "https://www.linkedin.com/in/ekdayana/"
-    - icon: ../images/team/team-4.png
-      name: "Игорь <br> Добжанский" 
-      job: UI/UX designer
-      ln: "https://www.linkedin.com/in/dobzha/"
-
-    - icon: ../images/team/team-6.png
-      name: "Станислав <br> Джужа" 
-      job: "Motion <br>designer"
-      ln: "https://www.linkedin.com/in/стас-джужа-844b5b144/"
-      
-    - icon: ../images/team/team-5.png
-      name: "Марина <br> Меркушкина" 
-      job: "SMM <br>specialist"
-      ln: "#"
-      
-    - icon: ../images/team/team-7.png
-      name: "Денис <br> Войтенко" 
-      job: "Python <br>developer"
-      ln: "#"
     - icon: ../images/team/team-17.png
       name: "Настя <br> Берест" 
       job: "Front-end <br>developer"
       ln: "https://www.linkedin.com/in/anastasiia-b-690446249/"
 
-    - icon: ../images/team/team-0.png
-      name: "Владимир <br> Матвеев" 
-      job: "системный <br> аналитик"
+    - icon: ../images/team/team-18.png
+      name: "Роман <br> Остролуцкий"   
+      job: Backend <br >Developer
+      ln: "#" 
+
+    - icon: ../images/team/team-7.png
+      name: "Денис <br> Войтенко" 
+      job: "Backend <br> Developer"
+      ln: "#"
+  
+    - icon: ../images/team/team-4.png
+      name: "Игорь <br> Добжанский" 
+      job: UI/UX <br> designer
+      ln: "https://www.linkedin.com/in/dobzha/"
+   
+    - icon: ../images/team/team-2.png
+      name: "Николай <br> Ульянич" 
+      job: "Head of <br> Trading Department"
+      ln: "#"
+    
+    - icon: ../images/team/team-16.png
+      name: "Александр <br> Хохлов" 
+      job: Trader
+      ln: "#"
+      
+    - icon: ../images/team/team-1.png
+      name: "Олег <br> Жидченко" 
+      job: Trader
       ln: "#"
    
-    - icon: ../images/team/team-8.png
-      name: "Larysa <br> Markhotska" 
-      job: редактор
+    - icon: ../images/team/team-9.png
+      name: "Светлана <br> Халиловна" 
+      job: "HR <br> Manager" 
       ln: "#"
+
+    - icon: ../images/team/team-19.png
+      name: "Вадим <br> Кубовский" 
+      job: "Chief Marketing <br> Officer"
+      ln: "#"
+
+    - icon: ../images/team/team-6.png
+      name: "Станислав <br> Джужа" 
+      job: "Media <br> Editor"
+      ln: "https://www.linkedin.com/in/стас-джужа-844b5b144/"
+
+    - icon: ../images/team/team-20.png
+      name: "Владислава <br> Яковлева" 
+      job: "News <br> Editor"
+      ln: "#"
+
+    - icon: ../images/team/team-21.png
+      name: "Лидия <br> Яременко" 
+      job: "PR <br> Manager"
+      ln: "#"
+      
+    - icon: ../images/team/team-22.png
+      name: "Дарья  <br> Сироткина" 
+      job: "Office <br> Manager"
+      ln: "#"
+

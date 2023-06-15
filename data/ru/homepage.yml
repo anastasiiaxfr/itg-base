@@ -45,7 +45,7 @@ section_subscribe:
 section_subscribe_work:
   enable: true
   title: Хочешь стать частью команды?
-  sub_title: Заповніть анкету, щоб отримати детальну відповідь на ваші запитання
+  sub_title: Заполните анкету, чтобы получить подробный ответ
   btn:
     enable: true
     title: Вакансии ITG 
