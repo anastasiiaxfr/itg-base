@@ -17,8 +17,184 @@ a
         box-shadow: none
 
 
+.page
+    &__content
+        margin-top: 30px
+        margin-bottom: 90px
+        +maw($xsm)
+            margin-bottom: 30px
+            margin-top: 0
+
+    &__container
+        overflow: hidden
+        @extend %card
+        user-select: initial
+        //padding: 25px 40px 30px
+        padding: 50px
+
+        +ft(14, 18, 400, $ffText2)
+        color: $grey3
+
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: $gap20
+            margin-top: $gap20 + 10px
+            color: $grey6 
+
+        & > :first-child
+            margin-top: 0
+
+        b, strong
+            color: $grey6 
+        h1, h2
+            //+ft(24, 36, 600, $ffText)
+            @extend %h3
+            
+        h3, h4, h5, h6
+            @extend %h4
+        p
+            margin-top: $gap20
+            margin-bottom: $gap20
+            &:first-of-type
+                margin-top: 0
+            &:last-of-type
+                margin-bottom: 0
+
+        a
+            text-decoration: underline
+            overflow-wrap: break-word
+
+            &:hover, &:active, &:focus
+                text-decoration: none
+
+        +maw($xxs)
+            padding: 25px
+
+    &__single
+        margin-bottom: 60px
+        .container
+            display: flex
+            flex-direction: column
+            gap: 20px
+        +maw($sm)
+            margin-bottom: 30px
+
+    &__info
+        margin-top: 20px
+        +maw($sm)
+            margin-top: 0
+
+    &__content
+        p
+            margin-top: 28px
+            margin-bottom: 28px
+            //+ft(16, 24, 400, $ffText2)
+            +ft(14, 14*1.5, 400, $ffText2)
+
+        img
+            display: block
+            object-fit: contain
+            max-width: 100%
+            width: 100%
+            margin: 16px auto
+
+        h1, h2, h3, h4, h5, h6
+            & + *
+                margin-top: 16px
+
+    &__col
+        margin: 45px auto
+        display: grid
+        grid-template-columns: 1fr 1fr 
+        gap: 6%
+
+        &--1
+            margin-bottom: calc(90px - 28px - 16px)
+
+        &--2
+            div > :first-child
+                margin-top: 0
+            div > :last-child
+                margin-bottom: 0
+
+        &--2, &--3
+            align-items: center
+
+        &--4
+            margin-bottom: 90px
+            margin-top: 90px
+
+     
+        &:first-child
+            margin-top: 90px
+        
+        &:last-of-type
+            margin-bottom: 90px
+
+        +maw($lg)
+            &--3
+                grid-template-columns: 1fr
+                margin-bottom: 0
+
+            &--4
+                margin-top: 0
+
+        +maw($sm)
+            grid-template-columns: 1fr
+            &--1
+                gap: 0
+                margin-bottom: 0
+            &--2
+                margin-top: 0
+                padding-bottom: 45px
+        +maw($xs)
+            &--3
+                gap: 28px
+                margin-bottom: 0
+                div > :last-child
+                    margin-top: 0
+                    margin-bottom: 0
+            &--4
+                margin-bottom: 30px
+                    
+           
+
+    &__row
+        +flex(flex, flex-start, flex-start, nowrap)
+        flex-direction: column
+        gap: $gap20
+
+    &__title
+        margin-bottom: 0
+        +maw($sm)
+            text-align: center
+
+    &__actions
+        display: grid
+        grid-template-columns: 300px 1fr
+        gap: 20px
+
+        +maw($md)
+            grid-template-columns: 1fr
+
+    &__sidebar
+        position: relative
+        @extend %card
+        padding: 20px
+
+
+    &__wrap
+        display: grid
+        grid-template-columns: 310px 1fr
+        gap: $gap20
+
+        +maw($md)
+            grid-template-columns: 1fr
+
+
 .card
     @extend %card
+    +flex(flex, initial, space-between, nowrap)
+    flex-direction: column
     margin: 0
 
     +ft(14, 18, 400, $ffText2)
@@ -67,11 +243,31 @@ a
     &__wrap
         display: grid
         //grid-template-columns: repeat(auto-fit, minmax(calc(33% - 20px), 1fr))
-        grid-template-columns: repeat(auto-fit, minmax(413px, 1fr))
+        grid-template-columns: repeat(auto-fill, minmax(413px, 1fr))
         gap: $gap20
 
+        &-sm
+            display: grid
+            gap: $gap20
+            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr))
+
+            .card
+                &__footer, &__content
+                    padding: 20px
+                    margin: 0
+                &__content
+                    padding-bottom: 0
+                &__footer
+                    padding-top: 0
+                &__text
+                    margin-bottom: 0
+                    +ft(11, 11*1.4, 400)
+                &__title
+                    +ft(15, 15, 700)
+
         +maw($xs)
-            grid-template-columns: 1fr
+            &, &-sm
+                grid-template-columns: 1fr
 
 
 .card-line
@@ -239,106 +435,6 @@ a
 
             svg
                 margin-left: 10px
-
-
-.page
-    &__content
-        margin-top: 30px
-        margin-bottom: 90px
-        +maw($xsm)
-            margin-bottom: 30px
-            margin-top: 0
-
-    &__container
-        overflow: hidden
-        @extend %card
-        user-select: initial
-        //padding: 25px 40px 30px
-        padding: 50px
-
-        +ft(14, 18, 400, $ffText2)
-        color: $grey3
-
-        h1, h2, h3, h4, h5, h6
-            margin-bottom: $gap20
-            margin-top: $gap20 + 10px
-            color: $grey6 
-
-        & > :first-child
-            margin-top: 0
-
-        b, strong
-            color: $grey6 
-        h1, h2
-            //+ft(24, 36, 600, $ffText)
-            @extend %h3
-            
-        h3, h4, h5, h6
-            @extend %h4
-        p
-            margin-top: $gap20
-            margin-bottom: $gap20
-            &:first-of-type
-                margin-top: 0
-            &:last-of-type
-                margin-bottom: 0
-
-        a
-            text-decoration: underline
-            overflow-wrap: break-word
-
-            &:hover, &:active, &:focus
-                text-decoration: none
-
-        +maw($xxs)
-            padding: 25px
-
-    &__single
-        margin-bottom: 60px
-        .container
-            display: flex
-            flex-direction: column
-            gap: 20px
-        +maw($sm)
-            margin-bottom: 30px
-
-    &__info
-        margin-top: 20px
-        +maw($sm)
-            margin-top: 0
-
-    &__row
-        +flex(flex, flex-start, flex-start, nowrap)
-        flex-direction: column
-        gap: $gap20
-
-    &__title
-        margin-bottom: 0
-        +maw($sm)
-            text-align: center
-
-    &__actions
-        display: grid
-        grid-template-columns: 300px 1fr
-        gap: 20px
-
-        +maw($md)
-            grid-template-columns: 1fr
-
-    &__sidebar
-        position: relative
-        @extend %card
-        padding: 20px
-
-
-    &__wrap
-        display: grid
-        grid-template-columns: 310px 1fr
-        gap: $gap20
-
-        +maw($md)
-            grid-template-columns: 1fr
-
 
 
 .interest

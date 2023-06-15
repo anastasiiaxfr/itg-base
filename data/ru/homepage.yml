@@ -34,12 +34,12 @@ section_solutions:
 
 section_subscribe:
   enable: true
-  title: Залишилися запитання? 
-  sub_title: Заповніть анкету, щоб отримати детальну відповідь 
+  title: Остались вопросы? 
+  sub_title: Заполните анкету, чтобы получить подробный ответ на ваши вопросы
   btn:
     enable: true
-    title: Напишіть нам 
-    label: конфіденційно
+    title: Заполнить анкету
+    label: конфиденциально
     link: "#"
 
 section_subscribe_work:
@@ -49,5 +49,5 @@ section_subscribe_work:
   btn:
     enable: true
     title: Вакансии ITG 
-    label: конфеденциaльно
+    label: конфиденциально
     link: "/work"

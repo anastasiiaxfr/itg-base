@@ -1,0 +1,132 @@
+{{ define "main" }} {{ $lang := .Page.Lang }} {{ $data := index $.Site.Data }}
+
+<div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}} {{ .Scratch.Set "title" .Params.title }} {{
+    .Scratch.Set "subtitle" .Params.sub_title }} {{- partial "_hero-parent.html" .
+    -}}
+    <!-- END section -->
+</div>
+<article class="page__content">
+    <div class="container">
+        {{ with (index $data $lang) }}
+
+        <section class="">
+            {{ if .about.cols }}
+            {{ with .about.cols }}
+            <div class="page__col page__col--1">
+                {{ range .col_1 }}
+                <div>
+                    {{ if .heading }}
+                    <h3>{{ .heading }}</h3>
+                    {{ end }}
+                    <p>
+                        {{ .paragraph }}
+                    </p>
+                    {{ if .img }}
+                    <img src="{{ .img | relURL }}" alt="ITG">
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+
+            <div class="page__col page__col--2">
+                {{ range .col_2 }}
+                <div>
+                    {{ if .heading }}
+                    <h3>{{ .heading }}</h3>
+                    {{ end }}
+                    
+                        {{ .paragraph | safeHTML }}
+                    
+                    {{ if .img }}
+                    <img src="{{ .img | relURL }}" alt="ITG">
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ end }}
+
+            <div class="page__col page__col--3">
+                {{ if .about.solutions }}
+                {{ with .about.solutions }}
+                <div class="card__wrap-sm">
+                    {{ range .items }}
+                    <a class="card" href="{{ .url }}">
+                        <figcaption class="card__content">
+                            <h2 class="card__title">
+                                {{ .title }}
+                            </h2>
+                            <p class="card__text">
+                                {{ .description }}
+                            </p>
+                        </figcaption>
+                        <footer class="card__footer">
+                            <svg class="icon card__icon" width="64" height="64">
+                                <use xlink:href="#shape"></use>
+                            </svg>
+
+                            <svg class="icon" width="24" height="24">
+                                <use xlink:href="#arr"></use>
+                            </svg>
+                        </footer>
+                    </a>
+                    {{ end }}
+                </div>
+                {{ end }}
+                {{ end }}
+
+                {{ if .about.cols }}
+                {{ with .about.cols }}
+                {{ range .col_3 }}
+                <div>
+                    {{ if .heading }}
+                    <h3>{{ .heading }}</h3>
+                    {{ end }}
+                    <p>
+                        {{ .paragraph | safeHTML }}
+                    </p>
+                    {{ if .img }}
+                    <img src="{{ .img | relURL }}" alt="ITG">
+                    {{ end }}
+                </div>
+                {{ end }}
+                {{ end }}
+                {{ end }}
+
+            </div>
+
+            {{ if .about.cols }}
+            {{ with .about.cols }}
+            <div class="page__col--4">
+                {{ range .col_4 }}
+                {{ if .heading }}
+                <h3>{{ .heading }}</h3>
+                {{ end }}
+                <p>
+                    {{ .paragraph | markdownify }}
+                </p>
+                {{ if .img }}
+                <img src="{{ .img | relURL }}" alt="ITG">
+                {{ end }}
+                {{ end }}
+            </div>
+            {{ end }}
+            {{ end }}
+
+
+        </section>
+
+        {{ end }}
+
+        <div class="page__info">
+            {{ with (index $data $lang) }} {{ $subscribe :=
+            .homepage.section_subscribe }} {{- partial "_subscribe.html" (dict
+            "title" $subscribe.title "subtitle" $subscribe.sub_title "btn_title"
+            $subscribe.btn.title "btn_label" $subscribe.btn.label "btn_url"
+            $subscribe.btn.url) -}} {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

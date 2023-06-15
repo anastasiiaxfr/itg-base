@@ -1,7 +1,7 @@
 baseURL = "/"
 # canonifyURLs = true
 defaultContentLanguage = "ua"
-disableLanguages = ["ru"]
+# disableLanguages = ["ru"]
 paginate = "6"
 relativeURLs = true
 summaryLength = "50"
@@ -30,7 +30,6 @@ home = "Home"
 languageCode = "en"
 languageName = "ENG"
 weight = 1
-
 
 
 [outputs]
@@ -176,11 +175,12 @@ hasChildren = true
     name = "Team"
     URL = "/team"
     weight = 2
-    # [[menu.footer]]
-    # parent = "about"
-    # name = "Careers"
+    [[menu.footer]]
+    parent = "about"
+    name = "Careers"
     # URL = "/works"
-    # weight = 3
+    URL = "/"
+    weight = 3
 
 [[menu.footer]]
 name = "Products"
@@ -190,12 +190,12 @@ hasChildren = true
     [[menu.footer]]
     parent = "product"
     name = "Epicurus"
-    URL = "https://epicurus-plp.netlify.app/"
+    URL = "https://itg-epicurus.netlify.app/"
     weight = 1
     [[menu.footer]]
     parent = "product"
     name = "ITG Development"
-    URL = "#"
+    URL = "/"
     weight = 2
     [[menu.footer]]
     parent = "product"
@@ -211,12 +211,14 @@ hasChildren = true
     [[menu.footer]]
     parent = "resources"
     name = "FAQ"
-    URL = "/faq"
+    # URL = "/faq"
+    URL = "/"
     weight = 1
     [[menu.footer]]
     parent = "resources"
     name = "Wiki"
-    URL = "/wiki"
+    # URL = "/wiki"
+    URL = "/"
     weight = 2
     [[menu.footer]]
     parent = "resources"

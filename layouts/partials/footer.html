@@ -22,7 +22,7 @@
                     <ul>
                         {{ range .Children }}
                         <li>
-                            <a href="{{ if eq .Pre "tel" }}tel:{{ .URL }}{{ else }} {{ .URL }} {{ end }}" target="{{ if in .URL "http" }}_blank{{ else }}_self{{ end }}">
+                            <a href="{{ if eq .Pre "tel" }}tel:{{ .URL }}{{ else }} {{ .URL | relLangURL }} {{ end }}" target="{{ if in .URL "http" }}_blank{{ else }}_self{{ end }}">
                                 {{ if .Pre }}
                                 <svg class="icon" width="14" height="14">
                                     <use xlink:href="#{{ .Pre }}"></use>

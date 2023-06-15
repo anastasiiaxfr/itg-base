@@ -48,6 +48,6 @@ section_subscribe_work:
   sub_title: Заповніть анкету, щоб отримати детальну відповідь на ваші запитання
   btn:
     enable: true
-    title: конфеденциaльно
-    label: Вакансии ITG
+    title: Вакансии ITG 
+    label: конфеденциaльно
     link: "/work"
