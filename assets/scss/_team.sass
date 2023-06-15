@@ -1,0 +1,106 @@
+
+.team
+    width: 100%
+    text-align: center
+
+    &:hover
+        .team__ava-overlay
+            opacity: 1
+
+    &__container
+        width: 100%
+        margin: 0 auto 40px
+        +maw($xs)
+            margin-top: 10px
+
+    &__wrap, &__wrap--main
+        display: grid
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr))
+        width: 100%
+        row-gap: $gap20 * 2.5
+        margin-left: auto
+        margin-right: auto
+
+        +maw($xs)
+            row-gap: $gap20
+
+        +maw($xxs)
+            grid-template-columns: 1fr
+       
+        &--main
+            grid-template-columns: repeat(auto-fit, 200px)
+            justify-content: center
+            gap: $gap20
+            row-gap: $gap20 * 2.5
+            margin-bottom: $gap20 * 2.5
+           
+            +maw($sm)
+                .team:last-child
+                    grid-column: 1/-1
+                    order: -1
+
+            +maw($xs)
+                row-gap: $gap20
+                margin-bottom: $gap20
+             
+    &__ava
+        position: relative
+        +sz(150px, 150px)
+        margin: 0 auto 10px
+        border-radius: 50%
+        overflow: hidden
+
+        .team--lg &
+            +sz(196px, 196px)
+
+        +maw($xs)
+            &, .team--lg &
+                +sz(75px, 75px)
+
+        &-overlay
+            +ps(absolute, (t, 0), (l, 0))
+            +flex(flex, center, center, nowrap)
+            +sz(100%, 100%)
+            background-color: rgba($black, 0.7)
+            opacity: 0
+            transition: $trs
+
+        & > img
+            display: block
+            +sz(100%, 100%)
+            margin-left: auto
+            margin-right: auto
+            border-radius: 50%
+            object-fit: cover
+    
+    &__name
+        margin: 0 auto 10px
+        //+ft(24, 36, 700, $ffText)
+        +ft(20, 20*1.4, 700, $ffText2)
+        color: $grey10
+        user-select: none
+
+        +maw(424)
+            font-size: 18px
+            br
+                display: none
+        
+
+    &__job
+        +ft(14, 18, 400, $ffText2)
+        font-size: 12px
+        text-transform: uppercase
+        letter-spacing: 0.05em
+        color: $orange
+        user-select: none
+        &::first-letter
+            text-transform: uppercase
+
+
+
+   
+
+
+
+
+

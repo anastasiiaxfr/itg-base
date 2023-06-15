@@ -1,0 +1,31 @@
+---
+bot:
+  enable: true
+  title: Bot transaction
+  rows:
+    - currency: Bitcoin
+      logo: "btc"
+      date: "2 Nov 2023"
+      time: "10:34AM"
+      usdt: "$270,489.90"
+      crypto: "+10.431 BTC"
+      up: true
+      status: "Completed"
+
+    - currency: Ethereum
+      logo: "etc"
+      date: "2 Nov 2023"
+      time: "07:21AM"
+      usdt: "$300,489.90"
+      crypto: "+202.4 ETH"
+      up: true
+      status: "Completed"
+
+    - currency: Bitcoin
+      logo: "btc"
+      date: "2 Nov 2023"
+      time: "10:34AM"
+      usdt: "$3,489.90"
+      crypto: "+0.431 BTC"
+      up: false
+      status: "Failed"

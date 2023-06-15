@@ -1,0 +1,89 @@
+.table
+    width: 100%
+
+    &__wrap
+        position: relative
+        margin-top: 35px
+
+        &::after
+            content: ''
+            +ps(absolute, (l, 0), (b, 0))
+            display: block
+            +sz(100%, 50%)
+            background: linear-gradient(180deg, transparent, $white)
+
+    &__title
+        margin-bottom: 10px
+        +ft(19, 30, 600)
+        color: $magenta
+
+    &__coin
+        +flex(flex, center, flex-start, nowrap)
+        gap: 8px
+
+        &-logo
+            & *
+                display: block
+                border-radius: 50%
+                +sz(28px, 28px)
+
+    &__datetime
+        display: inline-block
+        text-align: right
+
+    &__date, &__usdt
+        color: $grey12
+
+    &__crypto
+        +flex(inline-flex, center, flex-start, nowrap)
+        gap: 4px
+        color: $red
+
+        &-icon
+            transform: rotate(180deg)
+
+    .up
+        color: $green
+
+        & > :first-child
+            transform: rotate(0deg)
+
+    td
+        width: 25%
+        padding: 10px 0px
+        +ft(12, 17, 500)
+        text-align: center
+
+        &:nth-child(4)
+            width: 15%
+
+        &:last-child
+            text-align: right
+
+    +maw($xsm)
+      
+
+        &__header
+            text-align: center
+
+        tr
+            display: grid
+            grid-template-columns: 1fr 1fr
+
+        td
+            +flex(flex, center, center, wrap)
+            flex-direction: column
+            flex: 1
+            width: 100%
+
+            &:last-child
+                width: 100%
+            
+            & *
+                text-align: center
+
+
+.status
+    color: $red
+    &--completed
+        color: $green

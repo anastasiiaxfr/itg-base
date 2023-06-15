@@ -1,0 +1,113 @@
+
+.subscribe
+    +flex(flex, center, space-between, nowrap)
+    position: relative
+    width: 100%
+    margin: 0 auto
+    padding: 80px 70px
+    border-radius: $brs2
+    background-image: url('../images/bg-subscribe-img.svg'), url('../images/bg-subscribe-bd.svg')
+    background-size: contain 
+    background-repeat: no-repeat
+    background-position: 0 50%, 50%
+    color: $grey4
+
+    &__title
+        margin-bottom: 10px
+        //+ft(64, 96, 600, $ffText)
+        +ft(64, 64, 600, $ffText)
+
+    &__text
+        +ft(16, 24, 400, $ffText)
+
+    .btn
+        +theme(blue)
+        padding: 17.5px 60px
+        +ft(21, 35, 600)
+        white-space: nowrap
+
+        &__label
+            display: block
+            margin-bottom: 10px
+            text-align: center
+
+    +maw($lg)
+        &__title
+            +ft(42, 42, 600)
+            margin-bottom: 10px
+        .btn
+            padding: 17.5px 1.5em
+            +ft(16, 16, 600)
+
+    +maw($md)
+        background-image: none
+        border-radius: 0
+        border: 5px solid $blue2
+        border-width: 5px 0
+        padding: 20px
+
+    +maw($sm)
+        flex-wrap: wrap
+        text-align: center
+
+        &__btn
+            max-width: 100%
+            width: 100%
+
+            .btn
+                width: 100%
+                &__label
+                    display: none
+
+    +maw($xs)
+        &__title
+            +ft(24, 24, 600)
+
+
+.subscribe-base
+    padding: 55px
+    background-image: url('../images/bg-subscribe-2.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    border-radius: 26px
+    color: $grey8
+    overflow: hidden
+
+    +maw($md)
+        padding: 25px 20px
+
+    &__row
+        +flex(flex, center, space-between, nowrap)
+        row-gap: 20px
+        height: 100%
+
+        +maw($md)
+            flex-wrap: wrap
+            justify-content: center
+            text-align: center
+    
+    &__title
+        margin-bottom: 16px
+        //+ft(32, 48, 600, $ffText)
+        +ft(32, 32, 600, $ffText)
+        +maw($xsm)
+            +ft(24, 24, 600)
+        
+
+    &__text
+        +ft(18, 21, 600, $ffText2)
+        +maw($xsm)
+            +ft(16, 16*1.4, 600)
+
+    .btn
+        min-width: 270px
+        color: $white
+
+        &__label
+            display: block
+            margin-bottom: $gap20
+            text-align: center
+
+            svg
+                margin-left: 10px
+

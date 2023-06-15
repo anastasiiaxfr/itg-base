@@ -1,0 +1,59 @@
+
+.tabs
+    +flex(flex, center, fles-start, nowrap)
+    flex-direction: column
+    gap: 16px
+
+    +maw($md)
+        overflow: hidden
+        overflow-y: scroll
+        max-height: 225px
+        
+    +maw($sm)
+        max-height: 200px
+
+    &__toggle
+        display: block
+        width: 100%
+        +ft(16, 24, 400, $ffText)
+        color: $grey3
+        cursor: pointer
+        &.active, &:hover
+            color: $grey4
+            text-shadow: 0 0 0 $grey4
+
+    &__content
+        overflow: hidden
+        @extend %card
+        padding: 35px 40px
+
+    &__item
+        display: none
+        animation: fadeEffect 1.5s
+
+        +ft(14, 18, 400, $ffText2)
+        color: $grey9
+
+        &.active
+            display: block
+
+        h1, h2, h3, h4, h5, h6
+            margin-bottom: $gap20
+            color: $grey4
+
+        h1, h2
+            //+ft(36, 54, 700, $ffText)
+            @extend %h3
+
+        h3, h4, h5, h6
+            @extend %h4
+
+        a
+            text-decoration: underline
+            overflow-wrap: break-word
+            &:hover, &:active, &:focus
+                text-decoration: none
+    
+    &__text
+        h1, h2, h3, h4, h5, h6
+            margin-top: $gap20 + 10px

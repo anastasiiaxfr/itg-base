@@ -190,7 +190,7 @@ hasChildren = true
     [[menu.footer]]
     parent = "product"
     name = "Epicurus"
-    URL = "https://itg-epicurus.netlify.app/"
+    URL = "https://epicurus-plp.netlify.app/"
     weight = 1
     [[menu.footer]]
     parent = "product"

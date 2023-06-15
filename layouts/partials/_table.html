@@ -1,0 +1,52 @@
+<div class="table__wrap">
+    <div class="table__header">
+        <div class="table__title">
+            {{ .title }}
+        </div>
+    </div>
+    <table class="table">
+        <tbody>
+            {{ range .rows }}
+            <tr>
+                <td>
+                    <div class="table__coin">
+                        <div class="table__coin-logo">
+                            <svg class="icon" width="25" height="25">
+                                <use xlink:href="#{{ .logo }}"></use>
+                              </svg>
+                        </div>
+                        <span>
+                            {{ .currency }}
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div class="table__datetime">
+                        <div class="table__time">
+                            {{ .time }}
+                        </div>
+                        <div class="table__date">
+                            {{ .date }}
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="table__crypto {{ if .up }} up {{ end }}">
+                        <svg class="table__crypto-icon" width="10" height="10">
+                            <use xlink:href="#arr-top"></use>
+                        </svg> 
+                        {{ .crypto }}
+                    </div>
+                    <div class="table__usdt">
+                        {{ .usdt }}
+                    </div>
+                </td>
+                <td class="status {{ if eq .status "Completed" }} status--completed {{ end }}">
+                    {{ .status }}
+                </td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+
+</div>

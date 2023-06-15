@@ -1,0 +1,108 @@
+
+.card
+    @extend %card
+    +flex(flex, initial, space-between, nowrap)
+    flex-direction: column
+    margin: 0
+
+    +ft(14, 18, 400, $ffText2)
+    color: $grey3
+
+    &:nth-last-of-type(3), &:nth-last-of-type(2), &:nth-last-of-type(1)
+        .card__icon
+            opacity: 1
+    &:nth-last-of-type(3)
+        .card__icon
+            color: $pink
+    &:nth-last-of-type(2)
+        .card__icon
+            color: $blue
+    &:nth-last-of-type(1)
+        .card__icon
+            color: $blue1
+        
+    &__title
+        //margin-bottom: 6px
+        margin-bottom: 12px
+        +ft(26, 29, 700, $ffHeading)
+        color: $black
+
+    &__content
+        position: relative
+        z-index: 2
+        width: 90%
+        padding: 30px
+        padding-bottom: 0
+
+    &__footer
+        position: relative
+        z-index: 1
+        +flex(flex, center, flex-end, nowrap)
+        margin-top: auto
+        padding: 30px
+        padding-top: 0
+
+    &__icon
+        +ps(absolute, (b, 0), (r, 0))
+        z-index: -1
+        color: $blue1
+        opacity: 0
+
+    &__wrap
+        display: grid
+        //grid-template-columns: repeat(auto-fit, minmax(calc(33% - 20px), 1fr))
+        grid-template-columns: repeat(auto-fill, minmax(413px, 1fr))
+        gap: $gap20
+
+        &-sm
+            display: grid
+            gap: $gap20
+            grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr))
+
+            .card
+                &__footer, &__content
+                    padding: 20px
+                    margin: 0
+                &__content
+                    padding-bottom: 0
+                &__footer
+                    padding-top: 0
+                &__text
+                    margin-bottom: 0
+                    +ft(11, 11*1.4, 400)
+                &__title
+                    +ft(15, 15, 700)
+
+        +maw($xs)
+            &, &-sm
+                grid-template-columns: 1fr
+
+
+.card-line
+    @extend %card
+    +flex(flex, center, space-between, nowrap)
+    gap: 20px
+    width: 100%
+    padding: 15px 40px
+    +ft(14, 18, 400, $ffText2)
+    color: $grey4
+
+    svg
+        min-width: 24px
+
+    &__title
+        //margin-bottom: 6px
+        margin-bottom: 0
+        //+ft(24, 36, 600, $ffText)
+        +ft(17, 17*1.4, 600, $ffText2)
+
+    &__info
+        +flex(flex, center, space-between, wrap)
+        gap: 10px
+        +ft(14, 18, 400, $ffText2)
+        color: $grey11
+
+    +maw($sm)
+        padding: 15px 20px
+        &__title
+            +ft(16, 16*1.4, 600)

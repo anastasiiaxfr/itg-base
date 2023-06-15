@@ -1,0 +1,16 @@
+.stat
+    display: inline-block
+    color: $blue3
+    text-align: center
+    user-select: none
+    &__title
+        +ft(15, 22, 600)
+    &__val
+        font-weight: 900
+        font-size: 10vmax   
+        line-height: 1
+        text-shadow: -2px 2px darken($blue3, 20%)
+        transition: $trs
+    &:hover
+        .stat__val
+            text-shadow: none

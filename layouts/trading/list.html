@@ -1,0 +1,122 @@
+{{ define "main" }}
+{{ $lang := .Page.Lang }}
+{{ $data := index $.Site.Data }}
+
+<div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}}
+    {{ .Scratch.Set "title" .Params.title }}
+    {{ .Scratch.Set "subtitle" .Params.sub_title }}
+    {{- partial "_hero-parent.html" . -}}
+    <!-- END section -->
+</div>
+
+<article class="page__content">
+    <div class="container">
+        {{ with (index $data $lang) }}
+
+        {{ if .trading.cols }}
+        {{ with .trading.cols }}
+
+        {{ range .col }}
+        <section class="section-trading {{ if .revert }} section-trading--revert {{ end }}">
+            <div>
+                <h2 class="section-trading__title">
+                    {{ .heading }}
+                </h2>
+                <div>
+                    {{ .paragraph | markdownify }}
+                </div>
+
+                {{ with .counter }}
+                <figure class="stat">
+                    <div class="stat__val">
+                        {{ .numb }}
+                    </div>
+                    <figcaption class="stat__title">
+                        {{ .title }}
+                    </figcaption>
+                </figure>
+                {{ end }}
+
+            </div>
+            <div>
+                <figure class="section-trading__img">
+                    <img src="{{ .img | relURL }}" alt="{{ .heading }}">
+                </figure>
+            </div>
+        </section>
+        {{ end }}
+
+        {{ end }}
+        {{ end }}
+    </div>
+
+    {{ if .trading.partners }}
+    {{ with .trading.partners }}
+    <section class="section-partners">
+        <h2>{{ .heading }}</h2>
+        <div class="section-partners__logos">
+
+            <img src="{{ `../images/partners/partners-1.png` | relURL }}" alt="{{ .heading }}">
+            <img src="{{ `../images/partners/partners-2.png` | relURL }}" alt="{{ .heading }}">
+            <img src="{{ `../images/partners/partners-3.png` | relURL }}" alt="{{ .heading }}">
+            <img src="{{ `../images/partners/partners-4.png` | relURL }}" alt="{{ .heading }}">
+
+        </div>
+    </section>
+    {{ end }}
+    {{ end }}
+
+
+    <div class="section-robot__wrap">
+        <div class="container">
+            <section class="section-robot">
+                {{ if .trading.robot }}
+                {{ with .trading.robot }}
+                <div class="section-robot__row">
+                    <div>
+                        <h2 class="section-robot__title">
+                            {{ .heading }}
+                        </h2>
+                        <div>
+                            {{ .paragraph | markdownify }}
+                        </div>
+
+                        {{ with .btn }}
+                        <a href="{{ .url }}" class="section-robot__btn">{{ .label }}</a>
+                        {{ end }}
+                    </div>
+                    <div class="section-robot__img">
+                        <img src="{{ .img | relURL }}" alt="{{ .heading }}" width="" height="">
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+
+                {{ if .bot_transaction.bot }}
+                {{ with .bot_transaction.bot }}
+                    {{- partial "_table.html" . -}}
+                {{ end }}
+                {{ end }}
+            </section>
+        </div>
+    </div>
+
+
+
+
+    {{ end }}
+
+    <div class="container">
+        <div class="page__info">
+            {{ with (index $data $lang) }}
+            {{ $subscribe := .homepage.section_subscribe }}
+            {{- partial "_subscribe.html" (dict "title" $subscribe.title "subtitle" $subscribe.sub_title "btn_title"
+            $subscribe.btn.title "btn_label" $subscribe.btn.label "btn_url" $subscribe.btn.url) -}}
+            {{ end }}
+        </div>
+    </div>
+
+</article>
+{{ end }}

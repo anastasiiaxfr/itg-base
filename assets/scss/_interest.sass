@@ -1,0 +1,25 @@
+
+.interest
+    @extend %card
+    color: $grey8
+    padding: 30px 35px
+    text-align: center
+
+    &__row
+        +flex(flex, flex-start, center, nowrap)
+        gap: $gap20
+
+    &__title
+        margin-bottom: $gap20
+        +ft(16, 16*1.5, 400, $ffText)
+        letter-spacing: 0.1em
+
+    figure
+        cursor: pointer
+        transition: $trs
+        margin: 0
+        &:hover, &:focus, &:active
+            color: $grey2
+
+    figcaption
+        +ft(18, 21, 400, $ffText)

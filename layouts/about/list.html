@@ -37,7 +37,7 @@
                     <h3>{{ .heading }}</h3>
                     {{ end }}
                     
-                        {{ .paragraph | safeHTML }}
+                        {{ .paragraph | markdownify }}
                     
                     {{ if .img }}
                     <img src="{{ .img | relURL }}" alt="ITG">
@@ -114,9 +114,9 @@
             </div>
             {{ end }}
             {{ end }}
-
-
         </section>
+
+       
 
         {{ end }}
 
