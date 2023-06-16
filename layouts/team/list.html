@@ -25,7 +25,7 @@
                     </figure>
                     <figcaption class="team__title">
                         <div class="team__name">{{ .name | markdownify }}</div>
-                        <div class="team__job">{{ .job | safeHTML }}</div>
+                        <div class="team__job">{{ .job | markdownify }}</div>
                     </figcaption>
                 </a>
                 {{ end }} {{ end }}
@@ -42,8 +42,8 @@
                         </div>
                     </figure>
                     <figcaption class="team__title">
-                        <div class="team__name">{{ .name | safeHTML }}</div>
-                        <div class="team__job">{{ .job | safeHTML }}</div>
+                        <div class="team__name">{{ .name | markdownify }}</div>
+                        <div class="team__job">{{ .job | markdownify }}</div>
                     </figcaption>
                 </a>
                 {{ end }} {{ end }}

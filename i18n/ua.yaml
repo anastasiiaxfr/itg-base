@@ -1,5 +1,10 @@
-- id: login
-  translation: Регистрация
-
-- id: signup
-  translation: Вход
+- id: contact_us
+  translation: Напишіть нам
+- id: contact_name
+  translation: Імʼя Прізвище
+- id: contact_tel
+  translation: Телефон
+- id: contact_question
+  translation: Запитання
+- id: contact_btn
+  translation: Наділати

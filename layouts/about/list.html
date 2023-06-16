@@ -2,8 +2,9 @@
 
 <div>
     <!-- BEGIN section -->
-    {{- partial "header.html" . -}} {{ .Scratch.Set "title" .Params.title }} {{
-    .Scratch.Set "subtitle" .Params.sub_title }} {{- partial "_hero-parent.html" .
+    {{- partial "header.html" . -}} 
+    {{ .Scratch.Set "title" .Params.title }}
+    {{ .Scratch.Set "subtitle" .Params.sub_title }} {{- partial "_hero-parent.html" .
     -}}
     <!-- END section -->
 </div>

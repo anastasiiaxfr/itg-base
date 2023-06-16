@@ -1,28 +1,28 @@
 ---
 hero:
   enable: true
-  title: Компанія
-  sub_title: "Прийміть ритм криптотрейдингу, де кожен рух збігається з вашим диханням."
+  title: Сompany
+  sub_title: "Accept the rhythm of crypto-trading, where each movement coincides with your breathing"
 
 cols:
   enable: true
   col_1:
-    - paragraph: "Наша команда досвідчених аналітиків проводить глибоке дослідження криптовалютних ринків, аналізує тренди і робить прогнози, щоб допомогти нашим клієнтам приймати обґрунтовані інвестиційні рішення. Ми надаємо регулярні звіти та рекомендації, засновані на нашій експертизі, щоб допомогти нашим клієнтам поліпшити свою стратегію і досягти успіху на ринку криптовалют."
-      heading: Аналітика є основним стовпом нашої компанії.
-    - paragraph: "Наша команда трейдерів володіє глибокими знаннями і досвідом в області криптовалютних ринків і прагне до досягнення максимального прибутку для наших клієнтів. Ми використовуємо передові аналітичні інструменти та торгові стратегії, щоб поліпшити результати торгівлі та мінімізувати ризики."
-      heading: Ми активно займаємося торгівлею на криптовалютних ринках.
+    - paragraph: "Our team of experienced analysts conducts in-depth research on cryptocurrency markets, analyzes trends and makes predictions to help our clients with making wise investment decisions. We provide regular reports and recommendations based on our expertise to help our clients improve their strategy and achieve success in the cryptocurrency market."
+      heading: Analytics is the main core of our company.
+    - paragraph: "Our team of traders has in-depth knowledge and experience in the cryptocurrency markets and strives to maximize profits for our clients. We use advanced analytical tools and trading strategies to improve trading results and minimize risks."
+      heading: We are actively engaged in trading on the cryptocurrency markets.
 
   col_2:
-    - paragraph: "Наша компанія відповідає всім вимогам і ліцензіям, необхідним для законного здійснення торгівлі криптовалютами. Ми дотримуємося всіх застосовних правових норм і регуляцій, щоб забезпечити дотримання всіх вимог, що стосуються торгівлі криптовалютами. \n\n Крім того, ми також забезпечуємо повну прозорість у своїй діяльності, надаючи всю необхідну документацію та дозволи нашим клієнтам за запитом. Ми прагнемо підтримувати відкриті та довірчі відносини з нашими клієнтами, щоб вони почувалися впевнено та захищено під час співпраці з нами."
+    - paragraph: "Our company complies with all requirements and licenses required to conduct legal cryptocurrency trading. We adhere to all applicable legal norms and regulations in order to ensure compliance with all requirements related to cryptocurrency trading. \n\n In addition, we also ensure full transparency in our operations by providing all necessary documentation and approvals to our clients when requested. We strive to maintain an open and trusting relationship with our clients so that they feel confident and secure working with us."
     - img: "/images/about.jpg"
 
   col_3:
-    - paragraph: "Крім аналітики та торгівлі, ми також спеціалізуємося на розробці web 2 і web 3 рішень. Наша команда досвідчених розробників створює високоякісні веб-додатки, сайти та платформи, враховуючи останні тенденції та інновації у сфері технологій. Ми розробляємо користувацькі інтерфейси, інтегруємо функціональність блокчейну та забезпечуємо безпеку і надійність розроблених рішень."
+    - paragraph: "Besides analytics and trading, we also specialize in developing Web 2.0 and Web 3.0 solutions. Our team of experienced developers creates high-quality web applications, websites and platforms, taking into account the latest trends and innovations in technology. We develop user interfaces, integrate blockchain functionality and ensure the security and reliability of developed solutions."
         
   col_4:
-    - paragraph: "Ми прагнемо до довгострокових партнерських відносин з нашими клієнтами і надаємо великого значення індивідуальному підходу. Ми працюємо тісно з кожним клієнтом, щоб зрозуміти його унікальні потреби та цілі, і пропонуємо рішення, які максимально відповідають і перевершують їхні очікування."
-    - paragraph: "Нашою метою є допомога нашим клієнтам досягти успіху в криптовалютній сфері та використовувати переваги веб-технологій для розвитку свого бізнесу. Ми прагнемо стати надійним партнером, який пропонує високу якість послуг, індивідуальний підхід та інноваційні рішення, що сприяють зростанню й успіху наших клієнтів."
-    - paragraph: "Якщо ви шукаєте експертів у галузі аналітики, торгівлі на криптовалютних ринках і розробки веб-рішень, International Trade Group готова стати вашим надійним партнером. Зв'яжіться з нами сьогодні, щоб обговорити ваші потреби і почати разом будувати успішне майбутнє."
+    - paragraph: "We are committed to long-term partnerships with our customers and put a high value on a personalized approach. We work closely with each client to understand their unique needs and goals, and offer solutions that best meet and exceed their expectations."
+    - paragraph: "Our goal is to help our clients succeed in the cryptocurrency industry and take advantage of web technologies to grow their businesses. We strive to be a trusted partner, offering high quality services, a personalized approach and innovative solutions to help our clients grow and succeed."
+    - paragraph: "If you are looking for experts in analytics, cryptocurrency trading and web development, International Trade Group is ready to be your reliable partner. Contact us today to discuss your needs and start building a successful future together."
 
 
 solutions:
@@ -30,19 +30,20 @@ solutions:
   items:
     - title: ITG News
       url: "https://itg-news-group.netlify.app/"
-      description: З командою ITG ви можете бути впевнені, що ви будете завжди в курсі новин з ринку аналітики, геополітики та фінансів у сферах блокчейну, криптовалют, трейдингу та інвестицій.
+      description: Together with ITG team you can be sure that you will always be informed about news from analytics, geopolitics and finance in blockchain, cryptocurrencies, trading and investments.
     
     - title: Trading
       url: "#"
-      description: Ми використовуємо власні IT-рішення для забезпечення стабільного прибутку від криптотрейдингу.  За період 2020-2023 років середній прибуток криптотрейдингового відділу ITG склав 590%. 
+      description: We use in-house IT solutions to provide stable profits from crypto trading. Over the period 2020-2023, the average profit of ITG's Crypto-trading Department was 590%.
 
-    - title: Epicurus платформа
+    - title: Epicurus platform
       url: "https://itg-epicurus.netlify.app/"
-      description: Завдяки нашій інноваційній платформі інвестори та трейдери зможуть отримувати експертні аналітичні дані, базові та поглиблені знання в криптовалюті та використовувати унікальні інструменти для збільшення прибутку власного капіталу.
+      description: With our innovative platform, investors and traders can get expert analytics, basic and in-depth knowledge of cryptocurrency and use unique tools to increase their equity returns.
  
     - title: ITG Development
       url: "#"
-      description: Розробки в сфері Web 2.0, Web 3.0 та індивідуальні блокчейн-рішення від ITG дозволять вам оптимізувати витрати, збільшити прибуток та залучити крипто-ком’юніті до вашого продукту.
+      description: ITG's Web 2.0, Web 3.0 and custom blockchain solutions help you optimize costs, increase revenue and engage the cryptocurrency community with your product.
+
     
 
 

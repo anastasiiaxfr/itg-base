@@ -1,6 +1,6 @@
 ---
 title: "Команда"
-sub_title: "Is a simple ecosystem of interconnected crypto products designed for the mass adoption of cryptocurrencies."
+sub_title: "Наша команда - это профессионалы, вдохновленные своей работой и желанием развиваться"
 title_before: ""
 titile_after: ""
 

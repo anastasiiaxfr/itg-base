@@ -1,4 +1,5 @@
 const form = document.querySelector('.form');
+const modal_overlay = document.querySelector('.modal__overlay');
 
 form.addEventListener(
     "submit",
@@ -32,6 +33,7 @@ form.addEventListener(
                 submit.disabled = false;
                 //alert('DATA SEND')
                 addUserQuestionToFirestore(data);
+                modal_overlay.classList.remove('d-flex');
                 form.reset();
             } else {
                 submit.disabled = true;

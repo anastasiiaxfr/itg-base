@@ -2,7 +2,7 @@
   <div class="modal">
     <div class="modal__header">
       <div class="modal__title">
-        Contact Us
+        {{ i18n "contact_us" }}
       </div>
       <button class="modal__close">
         <svg class="icon" width="20" height="20">
@@ -12,9 +12,7 @@
     </div>
     <div class="modal__body">
 
-      <form class="form" method="POST" action="/" novalidate>
-       
-
+      <form class="form" method="{{ .Site.Params.form_method }}" action="/" novalidate>
           {{ range .Site.Params.form }}
           <div class="form__row">
             <label for="{{ .id }}" class="form__label">
@@ -22,7 +20,7 @@
                 {{ .label }}
               </span>
               <div class="form__error">
-                *Required field
+                *{{ .error }}
               </div>
             </label>
             {{ if ne .type "textarea" }}
@@ -35,7 +33,7 @@
           </div>
           {{ end }}
         
-          <input type="submit" value="Отправить" class="form__btn">
+          <input type="submit" value="{{ .Site.Params.form_submit }}" class="form__btn">
         
       </form>
 

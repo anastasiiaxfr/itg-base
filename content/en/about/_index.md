@@ -1,6 +1,6 @@
 ---
-title: "About"
-sub_title: "Погнали к нам в команду"
+title: "Сompany"
+sub_title: "Accept the rhythm of crypto-trading, where each movement coincides with your breathing"
 title_before: ""
 titile_after: ""
 

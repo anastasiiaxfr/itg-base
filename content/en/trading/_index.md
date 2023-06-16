@@ -1,6 +1,6 @@
 ---
 title: "Trading"
-sub_title: "Компанія ITG пишається своєю вражаючою статистикою і прозорою звітністю, які є основою нашого успіху. Ось лише кілька видатних характеристик, які ілюструють нашу чудову роботу:"
+sub_title: "ITG prides itself on its remarkable statistics and transparent reporting, which are the foundation of our success. These are some outstanding characteristics that illustrate our excellent work:"
 description : ""
 draft: false
 ---

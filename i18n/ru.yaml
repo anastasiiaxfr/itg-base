@@ -1,0 +1,10 @@
+- id: contact_us
+  translation: Напишите нам
+- id: contact_name
+  translation: Имя Фамилия
+- id: contact_tel
+  translation: Телефон
+- id: contact_question
+  translation: Вопрос 
+- id: contact_btn
+  translation: Отправить

@@ -8,6 +8,8 @@
     +ft(14, 18, 400, $ffText2)
     color: $grey3
 
+    overflow: hidden
+
     &:nth-last-of-type(3), &:nth-last-of-type(2), &:nth-last-of-type(1)
         .card__icon
             opacity: 1
@@ -20,6 +22,17 @@
     &:nth-last-of-type(1)
         .card__icon
             color: $blue1
+
+    &:hover
+        transition: all 1s ease-in-out
+
+        .card__wrap
+            align-self: flex-start
+        .card__overlay
+            display: flex
+        .card__footer
+            display: none
+        
         
     &__title
         //margin-bottom: 6px
@@ -48,11 +61,32 @@
         color: $blue1
         opacity: 0
 
+    &__overlay
+        position: relative
+        +flex(flex, flex-end, flex-end, nowrap)
+        //+ps(absolute, (b, 0), (r, 0))
+        display: none
+
+        svg
+            +ps(absolute, (b, 10px), (r, 10px))
+            +flex(flex, center, center, nowrap)
+            +sz(35px, 35px)
+            padding: 10px
+            background: $white
+            border-radius: 50%
+            box-shadow: $bxsd4
+
+        & *
+            display: block
+            max-width: 100% 
+            object-fit: contain
+               
     &__wrap
         display: grid
         //grid-template-columns: repeat(auto-fit, minmax(calc(33% - 20px), 1fr))
         grid-template-columns: repeat(auto-fill, minmax(413px, 1fr))
         gap: $gap20
+        //align-items: flex-start
 
         &-sm
             display: grid
@@ -60,6 +94,7 @@
             grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr))
 
             .card
+                min-height: 180px
                 &__footer, &__content
                     padding: 20px
                     margin: 0
@@ -73,10 +108,14 @@
                 &__title
                     +ft(15, 15, 700)
 
+        +maw($xsm)
+            &, &-sm
+                .card
+                    min-height: 0
+
         +maw($xs)
             &, &-sm
                 grid-template-columns: 1fr
-
 
 .card-line
     @extend %card

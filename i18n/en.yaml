@@ -1,8 +1,10 @@
-- id: login
-  translation: Log In
-
-- id: signup
-  translation: Sign Up
-
-- id: search_placeholder
-  translation: Введіть ваше питання
+- id: contact_us
+  translation: Contact us 
+- id: contact_name
+  translation: Name 
+- id: contact_tel
+  translation: Phone
+- id: contact_question
+  translation: Question 
+- id: contact_btn
+  translation: Send
