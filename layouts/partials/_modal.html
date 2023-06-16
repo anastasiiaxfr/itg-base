@@ -1,0 +1,77 @@
+<section class="modal__overlay">
+  <div class="modal">
+    <div class="modal__header">
+      <div class="modal__title">
+        Contact Us
+      </div>
+      <button class="modal__close">
+        <svg class="icon" width="20" height="20">
+          <use xlink:href="#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="modal__body">
+
+      <form class="form" method="POST" action="/" novalidate>
+       
+
+          {{ range .Site.Params.form }}
+          <div class="form__row">
+            <label for="{{ .id }}" class="form__label">
+              <span>
+                {{ .label }}
+              </span>
+              <div class="form__error">
+                *Required field
+              </div>
+            </label>
+            {{ if ne .type "textarea" }}
+            <input type="text" class="form__field" if="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}"
+            required="{{ .required }}">
+           
+            {{ else }}
+            <textarea class="form__field" row="4" id="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}"></textarea>
+            {{ end }}
+          </div>
+          {{ end }}
+        
+          <input type="submit" value="Отправить" class="form__btn">
+        
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<script>
+  const modal_toggle = document.querySelectorAll('[data-modal-toggle="modal"]');
+  const modal_close = document.querySelector('.modal__close');
+  const modal = document.querySelector('.modal__overlay');
+
+
+  modal_toggle.forEach(i => {
+    i.addEventListener('click', function (e) {
+      e.preventDefault()
+      modal.classList.add('d-flex')
+      modal.classList.remove('d-none')
+    })
+  });
+
+  modal_close.addEventListener('click', function () {
+    modal.classList.remove('d-flex')
+    modal.classList.add('d-none')
+    form.reset()
+  });
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.classList.remove('d-flex')
+      modal.classList.add('d-none')
+      form.reset()
+    }
+  });
+
+</script>

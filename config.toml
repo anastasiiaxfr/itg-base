@@ -31,6 +31,16 @@ languageCode = "en"
 languageName = "ENG"
 weight = 1
 
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+)$']
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
@@ -63,6 +73,10 @@ tm = "https://t.me/ITG_club"
 
 [[params.plugins.js]]
 link = "plugins/js/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/fb/gstatic.com_firebasejs_8.10.1_firebase-app.js"
+[[params.plugins.js]]
+link = "plugins/fb/gstatic.com_firebasejs_8.10.1_firebase-firestore.js"
 # [[params.plugins.js]]
 # link = "plugins/js/bootstrap.bundle.min.js"
 [[params.plugins.js]]
@@ -79,6 +93,35 @@ preloader = ""
 [taxonomies]
 category = "categories"
 tag = "tags"
+
+############ form ############
+[[params.form]]
+type = "text"
+label = "Имя Фамилия*"
+placeholder = "Введите имя и фамилию"
+required = "true"
+id = "contact_name"
+
+[[params.form]]
+type = "email"
+label = "Email*"
+placeholder = "email@mail.com"
+required = "true"
+id = "contact_email"
+
+[[params.form]]
+type = "text"
+label = "Телефон*"
+placeholder = "+380 ХХХ ХХХ ХХ ХX"
+required = "true"
+id = "contact_tel"
+
+[[params.form]]
+type = "textarea"
+label = "Вопрос"
+placeholder = "Введите вопрос"
+required = "true"
+id = "contact_question"
 
 
 ############################# socials #################################

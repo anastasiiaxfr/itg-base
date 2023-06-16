@@ -1,0 +1,33 @@
+.modal
+    max-width: 600px
+    width: 90%
+    margin: 30px auto
+    padding: 30px 40px 40px
+    background-color: $blue4
+    border-radius: $brs3
+
+    +maw($xxs)
+        padding: 15px 20px 25px
+
+    &__overlay
+        +ps(fixed, (t, 0), (l, 0))
+        z-index: 100500
+        +flex(flex, center, center, nowrap)
+        +sz(100%, 100%)
+        background: rgba($black, 0.5)
+        display: none
+    &__header
+        +flex(flex, center, space-between, nowrap)
+        margin-bottom: 20px
+
+    &__title
+        +ft(20, 30, 700)
+
+    &__close
+        border: none
+        background: transparent
+        color: $grey
+
+
+   
+
