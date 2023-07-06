@@ -75,7 +75,7 @@ logo_dark = "images/logo-w.svg"
 logo_description = "INTERNATIONAL TRADE GROUP"
 
 site_name = "ITG"
-site_url = "#"
+site_url = "https://itg-investment.com/"
 
 description = "Is a simple ecosystem of interconnected crypto products designed for the mass adoption of cryptocurrencies."
 
@@ -317,7 +317,7 @@ hasChildren = true
     [[Languages.en.menu.footer]]
     parent = "product"
     name = "ITG Development"
-    URL = "/"
+    URL = "https://itg-dev.com/"
     weight = 2
     [[Languages.en.menu.footer]]
     parent = "product"
@@ -333,8 +333,7 @@ hasChildren = true
     [[Languages.en.menu.footer]]
     parent = "resources"
     name = "FAQ"
-    # URL = "/faq"
-    URL = "/"
+    URL = "/faq"
     weight = 1
     [[Languages.en.menu.footer]]
     parent = "resources"
@@ -373,11 +372,6 @@ hasChildren = true
     name = "Cookie policy"
     URL = "/cookie"
     weight = 4
-    [[Languages.en.menu.footer]]
-    parent = "documentation"
-    name = "Risk warnings"
-    URL = "/risk"
-    weight = 5
 
 [[Languages.en.menu.footer]]
 name = "Contacts"
@@ -454,9 +448,8 @@ identifier = "resources"
 hasChildren = true
     [[Languages.ua.menu.footer]]
     parent = "resources"
-    name = "ЧЗП"
-    # URL = "/faq"
-    URL = "/"
+    name = "FAQ"
+    URL = "/faq"
     weight = 1
     [[Languages.ua.menu.footer]]
     parent = "resources"
@@ -495,11 +488,7 @@ hasChildren = true
     name = "Cookie політика"
     URL = "/cookie"
     weight = 4
-    [[Languages.ua.menu.footer]]
-    parent = "documentation"
-    name = "Попередження про ризики"
-    URL = "/risk"
-    weight = 5
+    
 
 [[Languages.ua.menu.footer]]
 name = "Контакти"
@@ -576,9 +565,8 @@ identifier = "resources"
 hasChildren = true
     [[Languages.ru.menu.footer]]
     parent = "resources"
-    name = "ЧАВО"
-    # URL = "/faq"
-    URL = "/"
+    name = "FAQ"
+    URL = "/faq"
     weight = 1
     [[Languages.ru.menu.footer]]
     parent = "resources"
@@ -617,11 +605,7 @@ hasChildren = true
     name = "Cookie политика"
     URL = "/cookie"
     weight = 4
-    [[Languages.ru.menu.footer]]
-    parent = "documentation"
-    name = "Предупреждения о рисках"
-    URL = "/risk"
-    weight = 5
+  
 
 [[Languages.ru.menu.footer]]
 name = "Контакты"

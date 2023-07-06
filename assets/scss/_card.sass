@@ -26,12 +26,12 @@
     &:hover
         transition: all 1s ease-in-out
 
-        .card__wrap
-            align-self: flex-start
-        .card__overlay
-            display: flex
-        .card__footer
-            display: none
+        // .card__wrap
+        //     align-self: flex-start
+        // .card__overlay
+        //     display: flex
+        // .card__footer
+        //     display: none
         
         
     &__title
@@ -39,6 +39,9 @@
         margin-bottom: 12px
         +ft(26, 29, 700, $ffHeading)
         color: $black
+
+    &__text
+        margin-bottom: 0
 
     &__content
         position: relative
@@ -54,6 +57,7 @@
         margin-top: auto
         padding: 30px
         padding-top: 0
+        display: none
 
     &__icon
         +ps(absolute, (b, 0), (r, 0))
@@ -65,7 +69,7 @@
         position: relative
         +flex(flex, flex-end, flex-end, nowrap)
         //+ps(absolute, (b, 0), (r, 0))
-        display: none
+        //display: none
 
         svg
             +ps(absolute, (b, 10px), (r, 10px))
@@ -87,6 +91,7 @@
         grid-template-columns: repeat(auto-fill, minmax(413px, 1fr))
         gap: $gap20
         //align-items: flex-start
+        align-self: flex-start
 
         &-sm
             display: grid
@@ -95,13 +100,16 @@
 
             .card
                 min-height: 180px
+                height: 200px
                 &__footer, &__content
                     padding: 20px
                     margin: 0
+                   
                 &__content
                     padding-bottom: 0
                 &__footer
                     padding-top: 0
+                    +flex(flex, center, flex-end, nowrap)
                 &__text
                     margin-bottom: 0
                     +ft(11, 11*1.4, 400)
@@ -112,13 +120,15 @@
             &, &-sm
                 .card
                     min-height: 0
+                    height: auto
 
         +maw($xs)
             &, &-sm
                 grid-template-columns: 1fr
 
 .card-line
-    @extend %card
+    border: none
+    background-color: $white
     +flex(flex, center, space-between, nowrap)
     gap: 20px
     width: 100%
@@ -129,17 +139,36 @@
     svg
         min-width: 24px
 
+    &__item
+        width: 100%
+        @extend %card
+        overflow: hidden
+
     &__title
         //margin-bottom: 6px
         margin-bottom: 0
+        border-radius: $brs3 $brs3 0 0
         //+ft(24, 36, 600, $ffText)
         +ft(17, 17*1.4, 600, $ffText2)
+        text-align: left
+
 
     &__info
         +flex(flex, center, space-between, wrap)
         gap: 10px
         +ft(14, 18, 400, $ffText2)
         color: $grey11
+
+    &__body
+        width: 100%
+        @extend .card-line
+        flex-direction: column
+        align-items: flex-start
+        text-align-last: left
+        border-radius: 0 0 $brs3 $brs3
+
+        display: none
+
 
     +maw($sm)
         padding: 15px 20px

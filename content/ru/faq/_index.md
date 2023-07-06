@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
 sub_title: "Погнали к нам в команду"
-heading: "Frequent questions"
+heading: "Вопросы и ответы"
 description : ""
 
 draft: false

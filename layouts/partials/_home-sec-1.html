@@ -8,7 +8,7 @@
     <div class="container">
         <div class="card__wrap">
             {{ range .items }}
-            <a class="card" href="{{ .url }}" target="{{ if in .url "http" }}_blank{{ else }}_self{{ end }}">
+            <a class="card" href="{{ .url | relLangURL }}" target="{{ if in .url "http" }}_blank{{ else }}_self{{ end }}">
                 <figcaption class="card__content">
                     <h2 class="card__title">
                         {{ .title }}

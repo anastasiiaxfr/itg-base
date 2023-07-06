@@ -1,0 +1,114 @@
+---
+faq:
+  enable: true
+  questions: 
+    - dd: "Is there any regulation of your activities at the legislative level?"
+      dl: "Currently, it is difficult to answer the question, as there is no legal framework for virtual assets in Ukraine. However, we can say that such activity is not prohibited. We are constantly monitoring the situation and updating the data."
+    - dd: "What income tax will I have to pay?"
+      dl: "There is no legal framework for the taxation of digital assets in Ukraine at the moment, but we are carefully monitoring the situation in this area. Therefore it is safe to assume that no tax has yet been introduced for these transactions. The only exceptions may include potential commissions, depending on the chosen cooperation package."
+   
+    - dd: "What activities, investments and operations does the company cover?"
+      dl: "In our work, we cover the following areas: \n\n
+          - Cryptocurrency trading on cryptocurrency exchanges: Spot, Futures; \n\n
+          - Investing in cryptocurrency start-ups and projects: ICO/IDO/IEO; \n\n
+          - Blockchain technology development and promotion: Epicurus."
+   
+    - dd: "How much do I need to start investing?"
+      dl: "The amount you can start investing depends on several variables, including your financial ability and investment objectives. You can start with $1000. There are no restrictions on the amount you can invest."
+   
+    - dd: "What does a company's profitability depend on?"
+      dl: "The profitability of a company may depend on various factors. The main factor is market conditions and news FUD."
+   
+    - dd: "How often are dividends paid?"
+      dl: "Dividends are paid depending on the agreement with the client or the terms of the contract concluded: once a month, quarterly, or at the end of the contract. It also depends on the logic that is written in the smart contract. We keep pace with technology and automate processes so our clients do not have to worry about the accuracy and timing of payments."
+   
+    - dd: "What is an investment fund, does the company have one?"
+      dl: "As the National Securities and Stock Market Commission of Ukraine states, 'An investment fund is a legal entity incorporated as a closed joint stock company, subject to the requirements set out in this regulation, which carries out exclusive co-investment activities'. \n\n We do not need to set up an investment fund (including an AIF) due to the fact that the operations carried out in our company are not typical of those of investment funds."
+   
+    - dd: "How does the company attract investment?"
+      dl: "The company uses various methods and strategies to attract investments: public presentations, advertising, demonstrations of working cases."
+   
+    - dd: "What kind of contract will be signed with the investor?"
+      dl: "Depending on the investor's choice of service, this may be a Deposit Agreement, an API or a Shareholders' Agreement."
+   
+    - dd: "Is any investor data transmitted to government agencies?"
+      dl: "No, the data of any investor cooperating with us is protected by a Non-Disclosure Agreement."
+   
+    - dd: "How can I check the legality of your activities?"
+      dl: "If you have any doubts or questions about the legality of the company's activities, we can provide you with our data and reports."
+   
+    - dd: "Can you provide recommendations from existing clients?"
+      dl: "Absolutely. All recommendations are available at this link"
+   
+    - dd: "Do you have an office where I can come for an appointment?"
+      dl: "Yes, our company has an office in Kyiv (Ukraine) and Marbella (Spain). A face-to-face meeting with the client is possible in these cities. You should inform us and arrange the time with our manager."
+   
+    - dd: "How long will it take to pay back?"
+      dl: "The payback depends considerably on your patience and the length of the contract. Although some investments can provide a high return in a short period of time, most investments take time to achieve a full return. \n\n If you invest $10,000 and earn 3% interest per year, you will earn 36% in a year. This means that in 33 months you will have fully recovered the amount of your investment, if you don't stop investing sooner."
+   
+    - dd: "I live abroad, can I sign the contract? How?"
+      dl: "Of course, we have taken this option into account. We offer ________, which allows you to sign contracts using an electronic digital signature (EDS) from both parties. You can now easily fill in and sign a contract on our website if you have an account."
+   
+    - dd: "Can I separately purchase a service just for investment portfolio analysis and rebalancing?"
+      dl: "This option is available, leave a request to contact a manager on our website."
+   
+    - dd: "Can I book a consultation and pay for it by the hour?"
+      dl: "You can fill in an application form to contact a manager on our website. We recommend you to prepare your questions in advance, as this will save money and time, both for us and for you."
+   
+    - dd: "Who will I sign the investment agreement with and to whom will I transfer the funds?"
+      dl: "Contract is signed with the International Trade Group, represented by the Director. This is a legal contract that will protect your interests and assets."
+   
+    - dd: "Do you have the necessary licences and permits?"
+      dl: "Some of our products require certain licenses. So we have Cryptocurrency exchange license, Cryptocurrency wallet license and a Broker license."
+   
+    - dd: "How to choose the best investment package?"
+      dl: "In order to choose the most suitable investment package, we recommend you to contact our advisors. They will be able to provide you with personalised information and advice based on your situation, objectives and preferences."
+   
+    - dd: "Who do you co-operate with in the market?"
+      dl: "Artozo, Inqud, Azferma, Lot.Trade."
+   
+    - dd: "What unique customer benefits will I get?"
+      dl: "You will get more confidence in your financial decisions and your investments will be more efficient. By saving time you will be able to earn more from your occupation, spend time with your loved ones and dedicate yourself to your hobbies. \n\n Our company works as a psychologist to protect you from risky and wrong actions that can lead to large losses. \n\n We provide a wide range of tools for investors: a Wiki-resource, a YouTube-channel with market overviews, Telegram-channels and clubs, as well as a news portal with geopolitical analysis. We will help you understand the market causes and teach you. \n\n With ITG, you can formulate realistic financial goals and develop a plan to achieve them."
+   
+    - dd: "What is the minimum term of the contracts?"
+      dl: "Depending on your personal financial plans, you can choose any length of time you want to invest your money, starting from 3 months."
+   
+    - dd: "How will I get my dividends?"
+      dl: "We are ready to discuss any convenient way for you when you sign the contract."
+   
+    - dd: "Can I terminate the contract early?"
+      dl: "Within the legal limits and conditions of the agreement, it is possible to consider early termination of the contract."
+   
+    - dd: "Where can I view my trading history?"
+      dl: "You can view your trading history on our website. Click on the following link:
+Alternatively, we can provide you with a report on request."
+   
+    - dd: "How long have you been in the market?"
+      dl: "ITG has been successfully operating on the market for more than 5 years since 2018."
+   
+    - dd: "Why do the deposit offers have such an interest rate? "
+      dl: "Deposit interest rates are determined by the need to support company operations, research new markets, develop new software, maintain staff and other operating costs. That's why the interest rate offer cannot be set higher"
+   
+    - dd: "Does the company have a guarantee fund? How is it financed?"
+      dl: "The guarantee fund is replenished using the Epicurus platform's own resources. In case you suffer any losses you will be reimbursed for part of it according to the rate, package or deposit you have selected."
+   
+    - dd: "Are there any fees?"
+      dl: "Most of our services are commission-free. The exception is the two packages in the Agent and Warren Buffett deposits, where fees are charged to the investor."
+   
+    - dd: "Where does the 2-4% profitability come from?"
+      dl: "Thanks to the efforts of all our departments, we are able to predict certain market movements or project outcomes in advance. This provides the opportunity to accurately earn profits. However, we also have a separate risk management function which takes into account opportunities and volumes, allowing us to ensure that we can meet our obligations to investors. ITG therefore offers a comfortable return of between 2% and 4% to ensure that we are able to meet our commitments in full."
+   
+    - dd: "Is there a limit to the amount invested?"
+      dl: "There is no limit to the investment amount."
+   
+    - dd: "Is it a pyramid scheme?"
+      dl: "We have two aspects that are good to note. \n\n Firstly, we provide open statistics on our trading so that you can see the actual process and amount of money we manage. This will give you a better understanding of how things work. \n\n Secondly, previously the issue of publicity was not an issue because our company has built its structure with a focus on robust workflow. We didn't put a lot of effort into publicity, given that it can vary. For example, there are companies that pay a lot of attention to their image on social media, but internally their business and implementation leave a lot to be desired. It is also worth noting that proper regulation in this area is still lacking."
+   
+    - dd: "Can I open more than one account?"
+      dl: "Yes, you can invest from one account in several profitable strategies."
+   
+    - dd: "Can I trust you? "
+      dl: 'We adhere to international quality standards, so it is hard to find any negative feedback about our work. Our team always meets the customer demands and fulfills warranty obligations as quickly as possible. \n\n We are an officially registered company - LLC "LVOLLET", which can be found in public registers of companies. \n\n We work openly: we pay taxes and have an office in Kyiv, where you can come at any time and ask your questions.'
+
+   
+   

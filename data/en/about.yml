@@ -33,15 +33,15 @@ solutions:
       description: Together with ITG team you can be sure that you will always be informed about news from analytics, geopolitics and finance in blockchain, cryptocurrencies, trading and investments.
     
     - title: Trading
-      url: "#"
+      url: "/trading"
       description: We use in-house IT solutions to provide stable profits from crypto trading. Over the period 2020-2023, the average profit of ITG's Crypto-trading Department was 590%.
 
     - title: Epicurus platform
-      url: "https://itg-epicurus.netlify.app/"
+      url: "https://epicurus-plp.netlify.app/"
       description: With our innovative platform, investors and traders can get expert analytics, basic and in-depth knowledge of cryptocurrency and use unique tools to increase their equity returns.
  
     - title: ITG Development
-      url: "#"
+      url: "https://itg-dev.com/"
       description: ITG's Web 2.0, Web 3.0 and custom blockchain solutions help you optimize costs, increase revenue and engage the cryptocurrency community with your product.
 
     

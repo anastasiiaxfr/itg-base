@@ -60,3 +60,30 @@ form.addEventListener(
     },
     false
 );
+
+const modal_toggle = document.querySelectorAll('[data-modal-toggle="modal"]');
+const modal_close = document.querySelector('.modal__close');
+let modal = document.querySelector('.modal__overlay');
+
+
+modal_toggle.forEach(i => {
+  i.addEventListener('click', function (e) {
+    e.preventDefault()
+    modal.classList.add('d-flex')
+    modal.classList.remove('d-none')
+  })
+});
+
+modal_close.addEventListener('click', function () {
+  modal.classList.remove('d-flex')
+  modal.classList.add('d-none')
+  form.reset()
+});
+
+modal.addEventListener('click', function (e) {
+  if (e.target === modal) {
+    modal.classList.remove('d-flex')
+    modal.classList.add('d-none')
+    form.reset()
+  }
+});

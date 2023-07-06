@@ -13,7 +13,7 @@ section_solutions:
       img: "../images/img-3.png"
     - title: Компанія
       url: "/about"
-      description: "International Trade Group (ITC) - це 5-річний досвід трейдингу на ринку криптовалют та створення інноваційних інструментів, що дозволяють клієнтам стабільно збільшувати свої прибутки."
+      description: "International Trade Group (ITG) - це 5-річний досвід трейдингу на ринку криптовалют та створення інноваційних інструментів, що дозволяють клієнтам стабільно збільшувати свої прибутки."
       img: "../images/img-5.png"
 
     - title: Команда 
@@ -27,7 +27,7 @@ section_solutions:
       img: "../images/img-1.png"
 
     - title: ITG Development
-      url: "#"
+      url: "http://itg-dev.com/"
       description: "Розробки в сфері Web 2.0, Web 3.0 та індивідуальні блокчейн-рішення від ITG дозволять вам оптимізувати витрати, збільшити прибуток та залучити крипто-комʼюніті до вашого продукту."
       img: "../images/img-7.png"
 

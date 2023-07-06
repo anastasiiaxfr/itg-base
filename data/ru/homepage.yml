@@ -28,7 +28,7 @@ section_solutions:
       img: "../images/img-1.png"
 
     - title: ITG Development
-      url: "#"
+      url: "http://itg-dev.com/"
       description: "Разработки в сфере Web 2.0, Web 3.0 и индивидуальные блокчейн-решения от ITG позволят вам оптимизировать затраты, увеличить прибыль и привлечь крипто-комьюнити к вашему продукту."
       img: "../images/img-7.png"
 
