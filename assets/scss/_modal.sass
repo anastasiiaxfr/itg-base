@@ -24,9 +24,44 @@
         +ft(20, 30, 700)
 
     &__close
+        margin-left: auto
         border: none
         background: transparent
         color: $grey
+
+.modal-success
+    position: relative
+    text-align: center
+    max-width: 465px
+    width: 90%
+    .modal
+        +ft(15, 15*1.4, 400)
+        &__title
+            margin-bottom: 12px
+            +ft(36, 36, 700)
+        &__cta
+            margin-top: 12px
+            @extend .form__btn
+        &__close
+            +ps(absolute, (l, auto), (t, 30px), (r, 30px))
+            
+        &__icon
+            +flex(flex, center, center, nowrap)
+            transform: translateY(-30px + -71px)
+            margin: 0 auto -71px
+            +sz(142px, 142px)
+            border-radius: 50%
+            background: $grad2
+            color: red
+    +maw($xs)
+        +ft(14, 14*1.5, 400)
+        .modal__title
+            +ft(24, 24, 700)
+        .modal__icon
+            transform: translateY(-15px + -71px)
+        .modal__close
+            top: 15px
+            right: 15px
 
 
    

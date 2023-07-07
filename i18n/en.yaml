@@ -8,3 +8,12 @@
   translation: Question 
 - id: contact_btn
   translation: Send
+
+- id: success_send
+  translation: Successfully sent
+
+- id: success_send_text
+  translation: Your application will be processed, and we will definitely contact you soon!
+
+- id: success_send_cta
+  translation: Ok, send

@@ -75,6 +75,19 @@ a
             display: flex
             flex-direction: column
             gap: 20px
+
+        table
+            border-collapse: collapse
+            td, th
+                border: 1px solid $grey7
+            td, th
+                padding: 5px 10px
+                +maw($sm)
+                    min-width: 200px
+            th
+                background-color: $blue3
+                color: $white
+
         +maw($sm)
             margin-bottom: 30px
 

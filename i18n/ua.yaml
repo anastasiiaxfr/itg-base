@@ -8,3 +8,16 @@
   translation: Запитання
 - id: contact_btn
   translation: Наділати
+
+- id: success_send
+  translation: Ваш запит успішно надіслано!
+
+- id: success_send_text
+  translation: Ваша заявка будет обработана и мы обязательно свяжемся с Вами в ближайшее время!
+
+- id: success_send_cta
+  translation: Добре
+
+  
+
+   

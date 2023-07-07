@@ -1,0 +1,26 @@
+{{ define "main" }} {{ $lang := .Page.Lang }} {{ $data := index $.Site.Data }}
+
+<div>
+    <!-- BEGIN section -->
+    {{- partial "header.html" . -}} 
+    {{ .Scratch.Set "title" .Params.title }}
+    {{ .Scratch.Set "subtitle" .Params.sub_title }} {{- partial "_hero-parent.html" .
+    -}}
+    <!-- END section -->
+</div>
+<article class="page__single">
+    <div class="container">
+        <div class="page__container">
+            {{ .Content }}
+        </div>
+        
+        <div class="page__info">
+            {{ with (index $data $lang) }} {{ $subscribe :=
+            .homepage.section_subscribe }} {{- partial "_subscribe.html" (dict
+            "title" $subscribe.title "subtitle" $subscribe.sub_title "btn_title"
+            $subscribe.btn.title "btn_label" $subscribe.btn.label "btn_url"
+            $subscribe.btn.url) -}} {{ end }}
+        </div>
+    </div>
+</article>
+{{ end }}

@@ -181,6 +181,7 @@ label = "Имя Фамилия*"
 placeholder = "Введите имя и фамилию"
 required = "true"
 id = "contact_name"
+error = "Обязательное поле"
 
 [[Languages.ru.form]]
 type = "email"
@@ -188,6 +189,7 @@ label = "Email*"
 placeholder = "email@mail.com"
 required = "true"
 id = "contact_email"
+error = "Обязательное поле"
 
 [[Languages.ru.form]]
 type = "text"
@@ -195,6 +197,7 @@ label = "Телефон*"
 placeholder = "+380 ХХХ ХХХ ХХ ХX"
 required = "true"
 id = "contact_tel"
+error = "Обязательное поле"
 
 [[Languages.ru.form]]
 type = "textarea"
@@ -202,6 +205,7 @@ label = "Вопрос"
 placeholder = "Введите вопрос"
 required = "true"
 id = "contact_question"
+error = "Обязательное поле"
 
 
 ############################# socials #################################
@@ -364,11 +368,6 @@ hasChildren = true
     weight = 2
     [[Languages.en.menu.footer]]
     parent = "documentation"
-    name = "Terms of use"
-    URL = "/terms-of-use"
-    weight = 3
-    [[Languages.en.menu.footer]]
-    parent = "documentation"
     name = "Cookie policy"
     URL = "/cookie"
     weight = 4
@@ -478,11 +477,6 @@ hasChildren = true
     name = "Політика конфіденційності"
     URL = "/policy"
     weight = 2
-    [[Languages.ua.menu.footer]]
-    parent = "documentation"
-    name = "Умови використання"
-    URL = "/terms-of-use"
-    weight = 3
     [[Languages.ua.menu.footer]]
     parent = "documentation"
     name = "Cookie політика"
@@ -595,11 +589,6 @@ hasChildren = true
     name = "Политика конфиденциальности"
     URL = "/policy"
     weight = 2
-    [[Languages.ru.menu.footer]]
-    parent = "documentation"
-    name = "Пользовательское соглашение"
-    URL = "/terms-of-use"
-    weight = 3
     [[Languages.ru.menu.footer]]
     parent = "documentation"
     name = "Cookie политика"

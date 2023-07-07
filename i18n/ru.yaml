@@ -8,3 +8,12 @@
   translation: Вопрос 
 - id: contact_btn
   translation: Отправить
+
+- id: success_send
+  translation: Успешно отправлено
+
+- id: success_send_text
+  translation: Ваша заявка будет обработана и мы обязательно свяжемся с Вами в ближайшее время!
+
+- id: success_send_cta
+  translation: Хорошо

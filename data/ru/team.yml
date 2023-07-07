@@ -4,17 +4,17 @@ team:
   items:
     - icon: ../images/team/team-10.png
       name: "Максим \n\n Рыбин" 
-      job: "Co-Founder ITG"
+      job: "Co-Founder ITG \n\n CEO"
       ln: "https://www.linkedin.com/in/maxim-rybin-435372a0/"
 
     - icon: ../images/team/team-13.png
       name: "Фарид \n\n Бабаев" 
-      job: "Co-Founder ITG"
+      job: "Co-Founder ITG \n\n CTO"
       ln: "https://www.linkedin.com/in/farid-babayev-05580626b/"
 
     - icon: ../images/team/team-12.png
       name: "Игорь \n\n Порох"
-      job: "Co-Founder ITG"
+      job: "Co-Founder ITG \n\n Brand Ambassador"
       ln: "https://www.linkedin.com/in/igor-porokh-15325899/"
 
     - icon: ../images/team/team-11.png
@@ -22,15 +22,40 @@ team:
       job: "Executive \n\n Director"
       ln: "https://www.linkedin.com/in/oleksandr-filipenko-1b5031168/"
 
+    - icon: ../images/team/team-14.png
+      name: "Данил \n\n Лазаренко" 
+      job: "Business Development \n\n Manager"
+      ln: "https://www.linkedin.com/in/danylo-lazorenko-0aa227153/"
+
+    - icon: ../images/team/team-19.png
+      name: "Вадим \n\n Кубивский" 
+      job: "Chief Marketing \n\n Officer"
+      ln: "https://www.linkedin.com/in/vadym-kubivskyi-a53618279"
+
     - icon: ../images/team/team-15.png
       name: "Дмитрий \n\n Ткач" 
       job: "CCO"
       ln: "https://www.linkedin.com/in/dmitriy-tkach-b04254a9/"
 
-    - icon: ../images/team/team-14.png
-      name: "Данил \n\n Лазаренко" 
-      job: "Business Development \n\n Manager"
-      ln: "https://www.linkedin.com/in/danylo-lazorenko-0aa227153/"
+    - icon: ../images/team/team-2.png
+      name: "Николай \n\n Ульянич" 
+      job: "Head of \n\n Trading Department"
+      ln: "https://www.linkedin.com/in/nickolay-alexandrovich-136613279/"
+
+    - icon: ../images/team/team-9.png
+      name: "Светлана \n\n Дорошкина" 
+      job: "HR \n\n Manager" 
+      ln: "https://www.linkedin.com/in/светлана-халиловна-89aba21b7/"
+
+    - icon: ../images/team/team-21.png
+      name: "Лидия \n\n Яременко" 
+      job: "PR \n\n Manager"
+      ln: "https://www.linkedin.com/in/lidiia-yeremenko-996633b9"
+
+    - icon: ../images/team/team-20.png
+      name: "Владислава \n\n Яковлева" 
+      job: "News \n\n Editor"
+      ln: "https://www.linkedin.com/mwlite/in/vladyslava-yakovlieva-789127216"
 
     - icon: ../images/team/team-23.png
       name: "Елена \n\n Долгуша" 
@@ -47,11 +72,6 @@ team:
       job: "Backend \n\n Developer"
       ln: "https://www.linkedin.com/in/roman-ostrolutskyi-159424235" 
 
-    - icon: ../images/team/team-7.png
-      name: "Денис \n\n Войтенко" 
-      job: "Backend \n\n Developer"
-      ln: "https://www.linkedin.com/in/%D0%B2%D0%BE%D0%B9%D1%82%D0%B5%D0%BD%D0%BA%D0%BE-%D0%B4%D0%B5%D0%BD%D0%B8%D1%81-9912811b3"
-  
     - icon: ../images/team/team-4.png
       name: "Игорь \n\n Добжанский" 
       job: "UI/UX \n\n designer"
@@ -61,11 +81,6 @@ team:
       name: "Владислав \n\n Шеремет" 
       job: "Product \n\n designer"
       ln: "https://www.linkedin.com/in/dobzha/"
-   
-    - icon: ../images/team/team-2.png
-      name: "Николай \n\n Ульянич" 
-      job: "Head of \n\n Trading Department"
-      ln: "https://www.linkedin.com/in/nickolay-alexandrovich-136613279/"
     
     - icon: ../images/team/team-16.png
       name: "Александр \n\n Хохлов" 
@@ -77,31 +92,11 @@ team:
       job: Trader
       ln: "https://www.linkedin.com/in/oleg-jhydchenko-452356279/"
    
-    - icon: ../images/team/team-9.png
-      name: "Светлана \n\n Дорошкина" 
-      job: "HR \n\n Manager" 
-      ln: "https://www.linkedin.com/in/светлана-халиловна-89aba21b7/"
-
-    - icon: ../images/team/team-19.png
-      name: "Вадим \n\n Кубивский" 
-      job: "Chief Marketing \n\n Officer"
-      ln: "https://www.linkedin.com/in/vadym-kubivskyi-a53618279"
-
     - icon: ../images/team/team-6.png
       name: "Станислав \n\n Джужа" 
       job: "Media \n\n Editor"
       ln: "https://www.linkedin.com/in/стас-джужа-844b5b144/"
 
-    - icon: ../images/team/team-20.png
-      name: "Владислава \n\n Яковлева" 
-      job: "News \n\n Editor"
-      ln: "https://www.linkedin.com/mwlite/in/vladyslava-yakovlieva-789127216"
-
-    - icon: ../images/team/team-21.png
-      name: "Лидия \n\n Яременко" 
-      job: "PR \n\n Manager"
-      ln: "https://www.linkedin.com/in/lidiia-yeremenko-996633b9"
-      
     - icon: ../images/team/team-25.png
       name: "Кристина \n\n Ворон" 
       job: "Marketing \n\n Assistant"
