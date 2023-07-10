@@ -1,0 +1,77 @@
+@include miw($lg) {
+  @keyframes anm1 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateY(3%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes anm2 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(3%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes anm3 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes anm4 {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-4%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+@include miw($lg) {
+  @keyframes scroll {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(-100%);
+    }
+  }
+  
+  @keyframes logos1 {
+    0% {
+      transform: translateX(10%);
+    }
+    100% {
+      transform: translateX(-10%);
+    }
+  }
+
+  @keyframes logos2 {
+    0% {
+      transform: translateX(-10%);
+    }
+    100% {
+      transform: translateX(10%);
+    }
+  }
+}

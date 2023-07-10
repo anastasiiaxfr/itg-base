@@ -233,14 +233,17 @@ a
                 margin: 5vh auto
             &--revert
                 grid-template-columns: 0.75fr 1fr
-                gap: 0
-
+                & > :last-child
+                    grid-column: 2 
+                    grid-row: 2
             .stat
                 text-align: left
 
         +maw($sm)
             &, &--revert
                 grid-template-columns: 1fr
+            &--revert
+                gap: 0
 
         +maw($xsm)
             &__title
@@ -249,13 +252,27 @@ a
     
     &-partners
         text-align: center
+        &__wrap
+            background: url('../images/trading/bg10.svg') no-repeat 50%/cover
         &__logos
             padding: 25px 0
-            background: url('../images/trading/bg10.svg') no-repeat 50%/cover
+            overflow: hidden
+            
+            // animation-duration: 10s
+            // animation-iteration-count: infinite
+            // animation-name: scroll
+            // animation-play-state: running
+            // animation-timing-function: linear
 
             img
                 margin: 25px auto
-
+                &:nth-child(1), &:nth-child(3)
+                    animation: logos1 15s linear infinite
+                &:nth-child(2),  &:nth-child(4)
+                    animation: logos2 15s linear infinite
+                &:nth-child(2),  &:nth-child(4)
+                    animation: logos2 15s linear infinite
+                
     &-robot
         padding: 40px 40px 
         box-shadow: $bxsd1

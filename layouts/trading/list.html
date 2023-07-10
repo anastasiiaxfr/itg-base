@@ -56,13 +56,14 @@
     {{ with .trading.partners }}
     <section class="section-partners">
         <h2>{{ .heading }}</h2>
+        <div class="section-partners__wrap">
         <div class="section-partners__logos">
 
             <img src="{{ `../images/partners/partners-1.png` | relURL }}" alt="{{ .heading }}">
             <img src="{{ `../images/partners/partners-2.png` | relURL }}" alt="{{ .heading }}">
             <img src="{{ `../images/partners/partners-3.png` | relURL }}" alt="{{ .heading }}">
             <img src="{{ `../images/partners/partners-4.png` | relURL }}" alt="{{ .heading }}">
-
+        </div>
         </div>
     </section>
     {{ end }}

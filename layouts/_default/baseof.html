@@ -29,7 +29,7 @@
     const spId = "{{ getenv "HUGO_PARAMS_SP_ID" }}";
     const spSecret = "{{ getenv "HUGO_PARAMS_SP_SECRET" }}";
     const spEmail = "{{ getenv "HUGO_PARAMS_SP_EMAIL" }}";
-
+    const spEmailTarget = "{{ getenv "HUGO_PARAMS_SP_EMAIL_TARGET" }}";
   </script>
 
   <script defer>
@@ -47,7 +47,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 
-
+  
   {{ $tel := resources.Get "js/_tel.js" | minify }}
   <script src="{{ $tel.Permalink | relURL }}"></script>
 
@@ -56,6 +56,8 @@
 
   {{ $script := resources.Get "js/script.js" | minify }}
   <script src="{{ $script.Permalink | relURL }}?v={{ now.Format "01-02-2006-14-52-26"}}"></script>
+
+  
 
   {{- partial "_svg.html" . -}}
 

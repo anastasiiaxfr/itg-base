@@ -4,7 +4,7 @@ cols:
   col:
     - heading: Futures
       paragraph: "Ф'ючерс, ф'ючерсний контракт (futures contract) - договір на купівлю або продаж базового активу, під час укладення якого учасники угоди домовляються про ціну та терміни виконання."
-      img: "images/trading/trading-1.svg"
+      img: "images/gif/diagram-1.gif"
       counter:
         enable: true
         numb: "466%"
@@ -12,7 +12,7 @@ cols:
 
     - heading: SPOT
       paragraph: "Спотовим називається ринок, на якому фінансові інструменти, такі як криптовалюти, продаються з негайною поставкою. Під час купівлі криптовалют на спотовому ринку ви обмінюєте один актив, наприклад, фіатну валюту на криптовалюту. Під час купівлі ви стаєте власником куплених монет/токенів або деякої їх частини. \n\n Заробіток на цьому інструменті відбувається, коли ми купуємо монети в момент їхньої недооцінки і продаємо за вищою ціною."
-      img: "images/trading/trading-2.svg"
+      img: "images/gif/diagram-2.webp"
       revert: true
       counter:
         enable: true
@@ -21,7 +21,7 @@ cols:
 
     - heading: "ICO/IDO"
       paragraph: "ICO (Initial Coin Offering) - це спосіб залучення інвестицій для криптопроєктів через продаж їхніх токенів або монет на ранній стадії. \n\n IDO (Initial DEX Offering) - це первинна пропозиція монет проєкту на децентралізованій криптобіржі. ICO/IDO"
-      img: "images/trading/trading-3.svg"
+      img: "images/gif/diagram-3.gif"
       counter:
         enable: true
         numb: "916%"

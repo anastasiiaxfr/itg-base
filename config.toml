@@ -104,6 +104,7 @@ link = "plugins/search/mark.js"
 [[params.plugins.js]]
 link = "plugins/search/search.js"
 
+
 [params.preloader]
 enable = true
 preloader = ""
@@ -308,8 +309,8 @@ hasChildren = true
     [[Languages.en.menu.footer]]
     parent = "about"
     name = "Careers"
-    URL = "/works"
-    #URL = "/"
+    #URL = "/works"
+    URL = "/"
     weight = 3
 
 [[Languages.en.menu.footer]]
@@ -419,8 +420,8 @@ hasChildren = true
     [[Languages.ua.menu.footer]]
     parent = "about"
     name = "Кар'єра"
-    URL = "/works"
-    #URL = "/"
+    #URL = "/works"
+    URL = "/"
     weight = 3
 
 [[Languages.ua.menu.footer]]
@@ -445,7 +446,7 @@ hasChildren = true
     weight = 3
 
 [[Languages.ua.menu.footer]]
-name = "Resources"
+name = "Ресурси"
 weight = 3
 identifier = "resources"
 hasChildren = true
@@ -531,8 +532,8 @@ hasChildren = true
     [[Languages.ru.menu.footer]]
     parent = "about"
     name = "Карьера"
-    URL = "/works"
-    #URL = "/"
+    #URL = "/works"
+    URL = "/"
     weight = 3
 
 [[Languages.ru.menu.footer]]

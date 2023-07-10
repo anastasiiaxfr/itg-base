@@ -7,7 +7,7 @@
 <section class="section section_1" id="solutions">
     <div class="container">
         <div class="card__wrap">
-            {{ range .items }}
+            {{ range $i, $arr := .items }}
             <a class="card" href="{{ .url | relLangURL }}" target="{{ if in .url "http" }}_blank{{ else }}_self{{ end }}">
                 <figcaption class="card__content">
                     <h2 class="card__title">
@@ -18,8 +18,10 @@
                     </p>
                 </figcaption>
                 <div class="card__overlay">
-                    <div class="card__overlay-img">
-                        <img src="{{ .img | relURL }}" alt="{{ .title }}">
+                    <div class="card__overlay-img" id="scene-{{ $i }}"   data-relative-input="true">
+                        {{ range $j, $arr2 := .imgs }}
+                            <img data-depth-x="0.{{$j}}{{$i}}" data-depth-y="0.{{$j}}{{$i}}" src="{{ .img | relURL }}" alt="{{ .title }}" class="parallax">
+                        {{ end }}
                     </div>
                     <svg class="" width="25" height="25">
                         <use xlink:href="#arr-r"></use>

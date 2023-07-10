@@ -10,6 +10,25 @@
 
     overflow: hidden
 
+    &:hover
+        img
+            animation-name: anm1
+            animation-duration: 2s
+            animation-iteration-count: infinite
+            animation-timing-function: ease-in-out
+        img
+            &:nth-of-type(1)
+                animation-name: anm1
+            &:nth-of-type(2)
+                animation-name: anm2
+            &:nth-of-type(3)
+                animation-name: anm3
+            &:nth-of-type(4)
+                animation-name: anm4
+            &:nth-of-type(5)
+                animation-name: anm5
+
+
     &:nth-last-of-type(3), &:nth-last-of-type(2), &:nth-last-of-type(1)
         .card__icon
             opacity: 1
@@ -70,6 +89,13 @@
         +flex(flex, flex-end, flex-end, nowrap)
         //+ps(absolute, (b, 0), (r, 0))
         //display: none
+        padding-top: 50%
+
+        
+
+        &-img
+            & *
+                +ps(absolute, (b, 0), (r, 0), (l, auto), (t, auto))
 
         svg
             +ps(absolute, (b, 10px), (r, 10px))
@@ -83,6 +109,7 @@
         & *
             display: block
             max-width: 100% 
+            width: 100%
             object-fit: contain
                
     &__wrap
@@ -129,6 +156,7 @@
 .card-line
     border: none
     background-color: $white
+    border-radius: 10px
     +flex(flex, center, space-between, nowrap)
     gap: 20px
     width: 100%

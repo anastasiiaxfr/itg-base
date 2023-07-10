@@ -4,7 +4,7 @@ cols:
   col:
     - heading: Futures
       paragraph: "Futures (futures contract) - an agreement to buy or sell an underlying asset, where the participants agree on the price and terms of execution."
-      img: "images/trading/trading-1.svg"
+      img: "images/gif/diagram-1.gif"
       counter:
         enable: true
         numb: "466%"
@@ -12,7 +12,7 @@ cols:
 
     - heading: SPOT
       paragraph: "Spot market is a market place that offers financial instruments, such as cryptocurrencies, for sale with immediate delivery. Trading cryptocurrencies on the spot market involves exchanging one asset, such as a fiat currency, for a cryptocurrency. Once you trade, you become the owner of the coins/tokens you buy, or some portion of them. \n\n This instrument brings profits as we purchase coins when they are undervalued and sell them at a higher price."
-      img: "images/trading/trading-2.svg"
+      img: "images/gif/diagram-2.webp"
       revert: true
       counter:
         enable: true
@@ -21,7 +21,7 @@ cols:
 
     - heading: "ICO/IDO"
       paragraph: "ICO (Initial Coin Offering) is a way to attract investment for crypto projects by selling their tokens or coins at an early stage. \n\n IDO (Initial DEX Offering) is the initial offering of project coins on a decentralized cryptocurrency exchange."
-      img: "images/trading/trading-3.svg"
+      img: "images/gif/diagram-3.gif"
       counter:
         enable: true
         numb: "916%"

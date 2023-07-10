@@ -10,33 +10,53 @@ section_solutions:
     - title: Трейдинг
       url: "/trading"
       description: "Мы используем собственные IT-решения для обеспечения стабильной прибыли от криптотрейдинга. За период 2020-2023 годов средняя прибыль криптотрейдингового отдела ITG составила 590%"
-      img: "../images/img-3.png"
+      imgs: 
+        - img: "../images/parallax/trading-1.png"
+        - img: "../images/parallax/trading-2.png"
+        - img: "../images/parallax/trading-3.png"
+        - img: "../images/parallax/trading-4.png"
 
     - title: Компания
       url: "/about"
       description: "International Trade Group (ITG) – это 5-летний опыт трейдинга на рынке криптовалют и создание инновационных инструментов, позволяющих клиентам стабильно увеличивать свои доходы."
-      img: "../images/img-5.png"
+      imgs: 
+        - img: "../images/parallax/company-1.png"
+        - img: "../images/parallax/company-2.png"
+        - img: "../images/parallax/company-3.png"
+        - img: "../images/parallax/company-4.png"
 
     - title: Команда
       url: "/team"
       description: "Более 40 экспертов и знатоков своего дела работают ежедневно над цифровизацией бизнеса и экономики. Новые технологии уже пришли, и мы знаем, как они могут положительно повлиять на ваш бизнес."
-      img: "../images/img-4.png"
+      imgs: 
+        - img: "../images/parallax/team-1.png"
+        - img: "../images/parallax/team-2.png"
+        - img: "../images/parallax/team-3.png"
+        - img: "../images/parallax/team-4.png"
+        - img: "../images/parallax/team-5.png"
 
     - title: Epicurus платформа
       url: "https://epicurus-plp.netlify.app/"
       description: "Благодаря нашей инновационной платформе инвесторы и трейдеры смогут получать экспертные аналитические данные, базовые и углубленные знания в криптовалюте и использовать уникальные инструменты для увеличения прибыли собственного капитала."
-      img: "../images/img-1.png"
+      imgs: 
+        - img: "../images/parallax/epicurus-1.png"
+        - img: "../images/parallax/epicurus-2.png"
+        - img: "../images/parallax/epicurus-3.png"
 
     - title: ITG Development
       url: "http://itg-dev.com/"
       description: "Разработки в сфере Web 2.0, Web 3.0 и индивидуальные блокчейн-решения от ITG позволят вам оптимизировать затраты, увеличить прибыль и привлечь крипто-комьюнити к вашему продукту."
-      img: "../images/img-7.png"
+      imgs: 
+        - img: "../images/parallax/dev-1.png"
+        - img: "../images/parallax/dev-2.png"
+        - img: "../images/parallax/dev-3.png"
 
     - title: ITG News
       url: "https://itg-news-group.netlify.app/"
       description: "С командой ITG вы можете быть уверены, что вы будете всегда в курсе новостей с рынка аналитики, геополитики и финансов в сферах блокчейна, криптовалют, трейдинга и инвестиций."
-      img: "../images/img-2.png"
-
+      imgs: 
+        - img: "../images/parallax/news-1.png"
+        - img: "../images/parallax/news-2.png"
 
 section_subscribe:
   enable: true

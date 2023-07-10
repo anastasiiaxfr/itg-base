@@ -1,69 +1,56 @@
-
-const recipientEmail = 'anastasiiaberest@gmail.com';
+const recipientEmail = spEmailTarget;
 const senderEmail = spEmail;
-const subject = 'TEST FORM SENDPULSE';
-const message = 'TEST LP EMAIL';
-
-const apiUrl = 'https://api.sendpulse.com/smtp/emails';
-
-const emailData = {
-    subject: subject,
-    from: {
-        name: 'ITG',
-        email: senderEmail
-    },
-    to: [
-        {
-            email: recipientEmail
-        }
-    ],
-    html: message
-};
-
+const subject = "Вопрос с ГЛАВНОГО сайта (itg-investments.com)";
 const id = spId;
 const secret = spSecret;
 const tokenUrl = 'https://api.sendpulse.com/oauth/access_token';
 
-// function getKey() {
-//   const accessData = {
-//       "grant_type": "client_credentials",
-//       "client_id": id,
-//       "client_secret": secret
-//   };
+const apiUrl = "https://api.sendpulse.com/smtp/emails";
 
-//   const requestOptions = {
-//       method: 'POST',
-//       headers: {
-//           'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(accessData)
-//   };
 
-//   fetch('https://api.sendpulse.com/oauth/access_token', requestOptions)
-//       .then(response => response.json())
-//       .then(data => {
+function sendEmail(apiKey, emailData) {
+    fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${apiKey}`
+      },
+      body: JSON.stringify(emailData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Email sent successfully:', data);
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+    });
+}
 
-//           fetch(apiUrl, {
-//             method: 'POST',
-//             headers: {
-//               'Content-Type': 'application/json',
-//               'Authorization': `Bearer ${data.access_token
-//               }`
-//             },
-//             body: JSON.stringify(emailData)
-//           })
-//           .then(response => response.json())
-//           .then(data => {
-//             console.log('Email sent successfully:', data);
-//           })
-//           .catch(error => {
-//             console.error('Error sending email:', error);
-//           });
 
-//         console.log(data.access_token)
-//       })
-//       .catch(error => console.error(error));
-// }
+function getKey(emailData) {
+  const accessData = {
+      "grant_type": "client_credentials",
+      "client_id": id,
+      "client_secret": secret
+  };
+
+  const requestOptions = {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(accessData)
+  };
+
+  fetch('https://api.sendpulse.com/oauth/access_token', requestOptions)
+      .then(response => response.json())
+      .then(data => {
+
+        sendEmail(data.access_token, emailData) 
+        console.log(data.access_token)
+      })
+      .catch(error => console.error(error));
+}
 
 //FORM
 const form = document.querySelector(".form");
@@ -112,7 +99,32 @@ form.addEventListener(
                 modal_overlay.classList.remove("d-flex");
                 modal_success.classList.add("d-flex");
                 form.reset();
-                //getKey();
+                
+                const message = `
+                user_name: ${name}, <br>
+                user_email: ${email}, <br>
+                user_tel: ${tel}, <br>
+                user_question: ${question}`;
+
+                const emailData = {
+                    "email": {
+                      "html": message,
+                      "text": message,
+                      "subject": subject,
+                      "from": {
+                        "name": "ITG",
+                        "email": senderEmail
+                      },
+                      "to": [
+                        {
+                          "name": "Recipient1 name",
+                          "email": recipientEmail
+                        }
+                      ]
+                    }
+                };
+
+                getKey(emailData);
             } else {
                 submit.disabled = true;
                 field_error.forEach((i) => {
@@ -272,3 +284,4 @@ updateTableLayout();
 
 // Update table layout on window resize
 window.addEventListener("resize", updateTableLayout);
+

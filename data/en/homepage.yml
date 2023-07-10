@@ -10,32 +10,53 @@ section_solutions:
     - title: Trading
       url: "/trading"
       description: "We use in-house IT solutions to provide stable profits from crypto trading. Over the period 2020-2023, the average profit of ITG's Crypto-trading Department was 590%"
-      img: "../images/img-3.png"
+      imgs: 
+        - img: "../images/parallax/trading-4.png"
+        - img: "../images/parallax/trading-2.png"
+        - img: "../images/parallax/trading-3.png"
+        - img: "../images/parallax/trading-1.png"
 
     - title: Company
       url: "/about"
       description: "International Trade Group (ITG) represents 5 years of cryptocurrency trading experience and the creation of innovative tools that allow clients to increase their income sustainably."
-      img: "../images/img-5.png"
+      imgs: 
+        - img: "../images/parallax/company-1.png"
+        - img: "../images/parallax/company-2.png"
+        - img: "../images/parallax/company-3.png"
+        - img: "../images/parallax/company-4.png"
 
     - title: Team
       url: "/team"
       description: "More than 40 experts and industry experts work every day to digitize your business and economy. New technologies have already appeared, and we know how they can positively impact your business." 
-      img: "../images/img-4.png"
+      imgs: 
+        - img: "../images/parallax/team-1.png"
+        - img: "../images/parallax/team-2.png"
+        - img: "../images/parallax/team-3.png"
+        - img: "../images/parallax/team-4.png"
+        - img: "../images/parallax/team-5.png"
 
     - title: Epicurus platform
       url: "https://epicurus-plp.netlify.app/"
       description: "With our innovative platform, investors and traders can get expert analytics, basic and in-depth knowledge of cryptocurrency and use unique tools to increase their equity returns."
-      img: "../images/img-1.png"
+      imgs: 
+        - img: "../images/parallax/epicurus-1.png"
+        - img: "../images/parallax/epicurus-2.png"
+        - img: "../images/parallax/epicurus-3.png"
 
     - title: ITG Development
       url: "http://itg-dev.com/"
       description: "ITG's Web 2.0, Web 3.0 and custom blockchain solutions help you optimize costs, increase revenue and engage the cryptocurrency community with your product."
-      img: "../images/img-7.png"
+      imgs: 
+        - img: "../images/parallax/dev-1.png"
+        - img: "../images/parallax/dev-2.png"
+        - img: "../images/parallax/dev-3.png"
 
     - title: ITG News
       url: "https://itg-news-group.netlify.app/"
       description: "Together with ITG team you can be sure that you will always be informed about news from analytics, geopolitics and finance in blockchain, cryptocurrencies, trading and investments."
-      img: "../images/img-2.png"
+      imgs: 
+        - img: "../images/parallax/news-1.png"
+        - img: "../images/parallax/news-2.png"
 
 
 section_subscribe:
