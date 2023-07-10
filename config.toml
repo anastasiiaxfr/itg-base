@@ -88,6 +88,10 @@ tm = "https://t.me/ITG_club"
 [[params.plugins.js]]
 link = "plugins/js/jquery.min.js"
 [[params.plugins.js]]
+link = "plugins/intl-tel/cdnjs.cloudflare.com_ajax_libs_intl-tel-input_18.1.8_js_utils.js"
+[[params.plugins.js]]
+link = "plugins/intl-tel/intl-tel-input@18.1.1_build_js_intlTelInput.min.js"
+[[params.plugins.js]]
 link = "plugins/fb/gstatic.com_firebasejs_8.10.1_firebase-app.js"
 [[params.plugins.js]]
 link = "plugins/fb/gstatic.com_firebasejs_8.10.1_firebase-firestore.js"
@@ -126,7 +130,7 @@ id = "contact_email"
 error = "Required field"
 
 [[Languages.en.form]]
-type = "text"
+type = "tel"
 label = "Phone*"
 placeholder = "+380 ХХХ ХХХ ХХ ХX"
 required = "true"
@@ -159,9 +163,9 @@ id = "contact_email"
 error = "Обов'язкове поле"
 
 [[Languages.ua.form]]
-type = "text"
+type = "tel"
 label = "Телефон*"
-placeholder = "+380 ХХХ ХХХ ХХ ХX"
+placeholder = "+380"
 required = "true"
 id = "contact_tel"
 error = "Обов'язкове поле"
@@ -192,7 +196,7 @@ id = "contact_email"
 error = "Обязательное поле"
 
 [[Languages.ru.form]]
-type = "text"
+type = "tel"
 label = "Телефон*"
 placeholder = "+380 ХХХ ХХХ ХХ ХX"
 required = "true"
@@ -304,8 +308,8 @@ hasChildren = true
     [[Languages.en.menu.footer]]
     parent = "about"
     name = "Careers"
-    # URL = "/works"
-    URL = "/"
+    URL = "/works"
+    #URL = "/"
     weight = 3
 
 [[Languages.en.menu.footer]]
@@ -415,8 +419,8 @@ hasChildren = true
     [[Languages.ua.menu.footer]]
     parent = "about"
     name = "Кар'єра"
-    # URL = "/works"
-    URL = "/"
+    URL = "/works"
+    #URL = "/"
     weight = 3
 
 [[Languages.ua.menu.footer]]
@@ -453,7 +457,7 @@ hasChildren = true
     [[Languages.ua.menu.footer]]
     parent = "resources"
     name = "Wiki"
-    # URL = "/wiki"
+    #URL = "/wiki"
     URL = "/"
     weight = 2
     [[Languages.ua.menu.footer]]
@@ -527,8 +531,8 @@ hasChildren = true
     [[Languages.ru.menu.footer]]
     parent = "about"
     name = "Карьера"
-    # URL = "/works"
-    URL = "/"
+    URL = "/works"
+    #URL = "/"
     weight = 3
 
 [[Languages.ru.menu.footer]]
@@ -565,7 +569,7 @@ hasChildren = true
     [[Languages.ru.menu.footer]]
     parent = "resources"
     name = "Wiki"
-    # URL = "/wiki"
+    #URL = "/wiki"
     URL = "/"
     weight = 2
     [[Languages.ru.menu.footer]]

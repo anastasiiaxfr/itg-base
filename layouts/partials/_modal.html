@@ -24,9 +24,18 @@
               </div>
             </label>
             {{ if ne .type "textarea" }}
-            <input type="text" class="form__field" if="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}"
+            {{ if ne .type "tel" }}
+            {{ if ne .type "email" }}
+            <input type="text" class="form__field" id="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}" 
             required="{{ .required }}">
-           
+            {{ else }}
+            <input type="email" class="form__field" id="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}" 
+            required="{{ .required }}">
+            {{ end }}
+            {{ else }}
+            <input type="tel" class="form__field" id="{{ .id }}" name="{{ .id }}"  
+            required="{{ .required }}">
+            {{ end }}
             {{ else }}
             <textarea class="form__field" row="4" id="{{ .id }}" name="{{ .id }}" placeholder="{{ .placeholder }}"></textarea>
             {{ end }}

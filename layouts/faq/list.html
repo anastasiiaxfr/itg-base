@@ -19,14 +19,31 @@
       <h2 class="page__title">{{ .Params.heading }}</h2>
     {{ end }}
 
+    
+
     <div class="page__row" itemscope itemtype="https://schema.org/FAQPage">
+
+      {{ range .Data.Pages }}
+      <div class="card-line__item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
+        <button class="card-line  faq__toggle">
+          <h3 class="card-line__title" itemprop="name">{{ .Params.dt | truncate 250 }}</h3>
+          <svg class="icon" width="24" height="24">
+            <use xlink:href="#arr"></use>
+          </svg>
+        </button>
+        <div class="card-line__body faq__content" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
+          <div itemprop="text">{{ .Params.dd | markdownify }}</div>
+        </div>
+        </div>
+      {{ end }}
+     
       {{ with (index $data $lang) }} 
       {{ if .faq }} 
       {{ with .faq }}
 
       {{ range .faq.questions }}
       <div class="card-line__item" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
-      <button class="card-line  faq__toggle" href="#" >
+      <button class="card-line  faq__toggle">
         <h3 class="card-line__title" itemprop="name">{{ .dd | truncate 250 }}</h3>
         <svg class="icon" width="24" height="24">
           <use xlink:href="#arr"></use>
@@ -60,7 +77,9 @@
       {{ end }}
       {{ end }}
       {{ end }}
-     
+
+
+
     </div>
 
     <div class="page__info d-none">

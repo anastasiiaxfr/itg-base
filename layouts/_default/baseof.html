@@ -25,6 +25,11 @@
     const storageBucket = "{{  getenv "HUGO_PARAMS_FIREBASE_STORAGE_BUCKET" }}";
     const messagingSenderId = "{{  getenv "HUGO_PARAMS_FIREBASE_MESSAGING_SENDER_ID" }}";
     const appId = "{{ getenv "HUGO_PARAMS_FIREBASE_APP_ID" }}";
+
+    const spId = "{{ getenv "HUGO_PARAMS_SP_ID" }}";
+    const spSecret = "{{ getenv "HUGO_PARAMS_SP_SECRET" }}";
+    const spEmail = "{{ getenv "HUGO_PARAMS_SP_EMAIL" }}";
+
   </script>
 
   <script defer>
@@ -40,13 +45,17 @@
     };
   </script>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
 
+
+  {{ $tel := resources.Get "js/_tel.js" | minify }}
+  <script src="{{ $tel.Permalink | relURL }}"></script>
 
   {{ $fb := resources.Get "js/_fb.js" | minify }}
-  <script src="{{ $fb.Permalink | relURL }}?v={{ now.Format " 01-02-2006-14-52-26"}}"></script>
+  <script src="{{ $fb.Permalink | relURL }}?v={{ now.Format "01-02-2006-14-52-26"}}"></script>
 
   {{ $script := resources.Get "js/script.js" | minify }}
-  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format " 01-02-2006-14-52-26"}}"></script>
+  <script src="{{ $script.Permalink | relURL }}?v={{ now.Format "01-02-2006-14-52-26"}}"></script>
 
   {{- partial "_svg.html" . -}}
 

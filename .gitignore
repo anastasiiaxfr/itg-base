@@ -2,3 +2,4 @@
 /public
 .hugo_build.lock
 .env
+node_modules

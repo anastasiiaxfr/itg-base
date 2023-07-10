@@ -64,119 +64,119 @@ $bxsd3: 0 5px 30px rgba($black, 0.1)
 $bxsd4: 0px 2px 10px rgba(118, 63, 191, 0.25)
 
 =ft($fz, $lh: 16, $fw: 400, $ff: $ffText)
-	$lh: $lh/$fz
-	$fz: $fz/16 + rem
-	$ff: $ff, $ffBack
-	font: $fw $fz/$lh $ff 
+    $lh: $lh/$fz
+    $fz: $fz/16 + rem
+    $ff: $ff, $ffBack
+    font: $fw $fz/$lh $ff 
 
 
 =theme($theme)
-	@if $theme == dark
-		background-color: $dark
-		color: $grey
+    @if $theme == dark
+        background-color: $dark
+        color: $grey
 
-		*::selection
-			background-color: rgba($white, 0.1)
+        *::selection
+            background-color: rgba($white, 0.1)
 
-	@if $theme == white
-		background-color: $white
-		color: $black
+    @if $theme == white
+        background-color: $white
+        color: $black
 
-		.text__sub
-			color: $grey2
+        .text__sub
+            color: $grey2
 
 
-	@if $theme == grey
-		background-color: rgba($black, 0.07)
-		backdrop-filter: blur(5.5px)
-		color: $black
-		&:hover, &:active, &:focus
-			background-color: rgba($black, 0.1)
+    @if $theme == grey
+        background-color: rgba($black, 0.07)
+        backdrop-filter: blur(5.5px)
+        color: $black
+        &:hover, &:active, &:focus
+            background-color: rgba($black, 0.1)
 
-	@if $theme == blue
-		background-color: $blue2
-		color: $grey4
-		&:hover, &:active, &:focus
-			background-color: darken($blue2, 5%)
+    @if $theme == blue
+        background-color: $blue2
+        color: $grey4
+        &:hover, &:active, &:focus
+            background-color: darken($blue2, 5%)
 
 
 =sz($w, $h)
-	width: $w
-	height: $h
+    width: $w
+    height: $h
 
 =flex($fx, $ai, $jc, $fxw)
-	display: $fx
-	align-items: $ai
-	justify-content: $jc
-	flex-wrap: $fxw
+    display: $fx
+    align-items: $ai
+    justify-content: $jc
+    flex-wrap: $fxw
 
 
 // input +padding((t, 30px), (b, 40px))
 // +position(absolute, (t, 0), (r, 0))
 =position($ps, $val)
-	@each $x in $ps
-		@if $x == t
-			top: $val
+    @each $x in $ps
+        @if $x == t
+            top: $val
 
-		@if $x == b
-			bottom: $val
+        @if $x == b
+            bottom: $val
 
-		@if $x == l
-			left: $val
+        @if $x == l
+            left: $val
 
-		@if $x == r
-			right: $val
+        @if $x == r
+            right: $val
 
 =ps($params...)
-	position: nth($params, 1)
-	@each $par, $val in $params
-		@if $par != null and $val != null
-			+position($par, $val)
+    position: nth($params, 1)
+    @each $par, $val in $params
+        @if $par != null and $val != null
+            +position($par, $val)
 
 // input +padding((t, 30px), (b, 40px))
 =padding($pd, $val)
-	@if $pd == t
-		padding-top: $val
+    @if $pd == t
+        padding-top: $val
 
-	@if $pd == b
-		padding-bottom: $val
+    @if $pd == b
+        padding-bottom: $val
 
-	@if $pd == l
-		padding-left: $val
+    @if $pd == l
+        padding-left: $val
 
-	@if $pd == r
-		padding-right: $val
+    @if $pd == r
+        padding-right: $val
 
-	@if $pd == all
-		padding: $val
+    @if $pd == all
+        padding: $val
 
-	
+    
 
 =pd($params...)
-	@each $par, $val in $params
-		@if $par != null and $val != null
-			+padding($par, $val)
+    @each $par, $val in $params
+        @if $par != null and $val != null
+            +padding($par, $val)
 
 =margin($mg, $val)
-	@if $mg == t
-		margin-top: $val
+    @if $mg == t
+        margin-top: $val
 
-	@if $mg == b
-		margin-bottom: $val
+    @if $mg == b
+        margin-bottom: $val
 
-	@if $mg == l
-		margin-left: $val
+    @if $mg == l
+        margin-left: $val
 
-	@if $mg == r
-		margin-right: $val
+    @if $mg == r
+        margin-right: $val
 
-	@if $mg == all
-		margin: $val
+    @if $mg == all
+        margin: $val
 
 =mg($params...)
-	@each $par, $val in $params
-		@if $par != null and $val != null
-			+margin($par, $val)
+    @each $par, $val in $params
+        @if $par != null and $val != null
+            +margin($par, $val)
 
 // =sp($prop, $params...)
 // 	@if $prop == mg
@@ -186,80 +186,92 @@ $bxsd4: 0px 2px 10px rgba(118, 63, 191, 0.25)
 
 $i: 0
 =spacer($arr)
-	@for $val from 1 through length($arr) 
-		$spr: nth($arr, 1)
-	@if $spr == mg
-		@for $i from 2 through length($arr)
-			$props: nth($arr, $i)
-			+margin($props...)
-	@if $spr == pd
-		@for $i from 2 through length($arr)
-			$props: nth($arr, $i)
-			+padding($props...)
-	
+    @for $val from 1 through length($arr) 
+        $spr: nth($arr, 1)
+    @if $spr == mg
+        @for $i from 2 through length($arr)
+            $props: nth($arr, $i)
+            +margin($props...)
+    @if $spr == pd
+        @for $i from 2 through length($arr)
+            $props: nth($arr, $i)
+            +padding($props...)
+    
 =sp($x, $y)
-	+spacer($x)
-	+spacer($y)
-		
-	
+    +spacer($x)
+    +spacer($y)
+        
+    
 //+sp((mg, (l, 20px), (b, 15px)), (pd, (r, 10px)))
 
-	
+    
 =maw($brkp)
-	@media only screen and (max-width: $brkp+"px")
-		@content
+    @media only screen and (max-width: $brkp+"px")
+        @content
 
 =miw($brkp)
-	@media only screen and (min-width: $brkp+"px")
-		@content
+    @media only screen and (min-width: $brkp+"px")
+        @content
 
 =mw($min, $max)
-	@media only screen and (min-width: $min+"px") and (max-width: $max+"px")
-		@content
+    @media only screen and (min-width: $min+"px") and (max-width: $max+"px")
+        @content
 
 
 @function rem($val)
-	$res: $val/16 + rem
-	@return $res
+    $res: $val/16 + rem
+    @return $res
 
 @function em($val)
-	$res: $val/16 + em
-	@return $res 
+    $res: $val/16 + em
+    @return $res 
 
 
 
 //  font-size: calc([minfz] + ([maxfz] - [minfz]) * ((100vw - [miw]) / ([maw] - [miw])));
-	
+    
 =rfz($maw, $miw, $minfz, $maxfz)
-	$maw : $maw + px
-	$miw : $miw + px
-	$minfz : $minfz + px
-	$maxfz : $maxfz + px	
-	@media only screen and (min-width: $miw) 
-		font-size: calc(#{$minfz} + (#{$maxfz} - #{$minfz}) * ((100vw - #{$miw}) / (#{$maw} - #{$miw})))
+    $maw : $maw + px
+    $miw : $miw + px
+    $minfz : $minfz + px
+    $maxfz : $maxfz + px	
+    @media only screen and (min-width: $miw) 
+        font-size: calc(#{$minfz} + (#{$maxfz} - #{$minfz}) * ((100vw - #{$miw}) / (#{$maw} - #{$miw})))
 
-	@media only screen and (min-width: $maw)
-		font-size: $maxfz
-	
+    @media only screen and (min-width: $maw)
+        font-size: $maxfz
+    
 // +rfz(1120, 320, 12, 40)
 
-%card
-	border: none
-	background: rgba($white, 0.92)
-	box-shadow: 2px 4px 34px rgba(2, 4, 14, 0.05), inset 0px 4px 23px rgba(136, 156, 227, 0.05)
-	border-radius: 15px
+%scroll
+    &::-webkit-scrollbar
+        width: 10px
+        height: 10px
 
-	*::selection
-		background-color: lighten($grey7, 5%)
+    &::-webkit-scrollbar-track
+        background-color: $black
+
+    &::-webkit-scrollbar-thumb
+        background: $black
+
+
+%card
+    border: none
+    background: rgba($white, 0.92)
+    box-shadow: 2px 4px 34px rgba(2, 4, 14, 0.05), inset 0px 4px 23px rgba(136, 156, 227, 0.05)
+    border-radius: 15px
+
+    *::selection
+        background-color: lighten($grey7, 5%)
 
 %mask
-	mask: $grad1
-	mask-composite: exclude
-	-webkit-mask: $grad1
-	-webkit-mask-composite: xor
-	content: ""
-	position: absolute
-	z-index: 0
-	inset: 0
-	padding: 2px
+    mask: $grad1
+    mask-composite: exclude
+    -webkit-mask: $grad1
+    -webkit-mask-composite: xor
+    content: ""
+    position: absolute
+    z-index: 0
+    inset: 0
+    padding: 2px
 

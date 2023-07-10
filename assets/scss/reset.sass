@@ -1,50 +1,56 @@
 html, body 
-	height: 100%
-	min-height: 100vh
-	font-family: $ffText
-	scroll-behavior: smooth
+    height: 100%
+    min-height: 100vh
+    font-family: $ffText
+    scroll-behavior: smooth
 
 body
-	background-color: $white
-	&::-webkit-scrollbar
-		width: 10px
-		height: 10px
-
-	&::-webkit-scrollbar-track
-		background-color: $black
-
-	&::-webkit-scrollbar-thumb
-		background: $black
-
+    background-color: $white
+    @extend %scroll
 
 *
-	//user-select: none
-	&::selection
-		background-color: $white
+    //user-select: none
+    &::selection
+        background-color: $white
 
 
 a
-	text-decoration: none
-	color: inherit
-	&:hover, &:focus
-		text-decoration: none
-		color: $black
+    text-decoration: none
+    color: inherit
+    &:hover, &:focus
+        text-decoration: none
+        color: $black
 
 img
     user-select: none
 
 button, a, input 
-	&:hover, &:active, &:focus
-		appearance: none
-		outline: none
-		box-shadow: none 
+    &:hover, &:active, &:focus
+        appearance: none
+        outline: none
+        box-shadow: none 
 
 .page
-	&__body
-		display: flex
-		flex-direction: column
-	&__wrapper
-		flex: 1 0 auto
+    &__body
+        display: flex
+        flex-direction: column
+    &__wrapper
+        flex: 1 0 auto
 
 \:root
     --colGap: 64px
+
+.iti
+    width: 100%
+    margin-top: 8px
+
+.iti__country-list
+    max-width: 245px
+    +ft(12, 12, 400)
+    border-radius: 0 0 8px 8px
+    overflow: hidden
+    overflow-y: scroll
+    @extend %scroll
+    &::-webkit-scrollbar-track
+        background-color: $white
+    

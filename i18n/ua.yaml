@@ -13,8 +13,7 @@
   translation: Ваш запит успішно надіслано!
 
 - id: success_send_text
-  translation: Ваша заявка будет обработана и мы обязательно свяжемся с Вами в ближайшее время!
-
+  translation: "Ми обов'язково зв'яжемося з вами найближчим часом!"
 - id: success_send_cta
   translation: Добре
 
