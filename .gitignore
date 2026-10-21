@@ -3,3 +3,4 @@
 .hugo_build.lock
 .env
 node_modules
+package-lock.json
